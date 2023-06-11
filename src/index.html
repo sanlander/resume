@@ -1,32 +1,149 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png" />
 
-  <title>Webpack</title>
-</head>
-<body>
-  <header>
-    <h1>Webpack</h1>
-  </header>
+    <title>Gorshkoder Oleksandr</title>
+  </head>
+  <body>
+    <!------------- Header ------------->
+    <header class="header">
+      <div class="header-fixed">
+        <!------------- Progress bar ------------->
+        <div class="progress"></div>
 
-  <main>
-    <div class="img"></div>
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-    </ul>
-  </main>
+        <div class="container container-header">
+          <!------------- Logo ------------->
+          <a class="header-logo" href="#">resu<span>me</span></a>
 
-  <footer>
-    <div class="image"></div>
-  </footer>
-</body>
+          <!------------- Navigation ------------->
+          <nav class="nav">
+            <ul class="nav-menu list">
+              <li class="nav-menu__item">
+                <a href="" class="nav-menu__link current-link">Features</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="" class="nav-menu__link">Integrations</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="" class="nav-menu__link">Pricing</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="" class="nav-menu__link">Company</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="" class="nav-menu__link">Blog</a>
+              </li>
+              <li class="nav-menu__item">
+                <a href="" class="nav-menu__link demo">Get a demo</a>
+              </li>
+            </ul>
+            <!------------- Header authorization(Login) ------------->
+            <div class="authorization">
+              <a href="" class="nav-menu__link">
+                <svg class="login__icon">
+                  <use href="./img/sprites.svg#icon-sprite"></use>
+                </svg>
+                Login</a
+              >
+            </div>
+
+            <!------- Mobile menu ------->
+            <div class="mob-menu is-hidden">
+              <div class="container">
+                <!----- Button close menu ----->
+                <button type="button" class="menu-close-btn">
+                  <svg>
+                    <use href="./img/sprites.svg#icon-close"></use>
+                  </svg>
+                </button>
+                <!----- Menu navigation ----->
+                <ul class="mob-menu-nav">
+                  <li class="mob-menu-nav__item">
+                    <a class="mob-menu-nav__link" href="">Features</a>
+                  </li>
+                  <li class="mob-menu-nav__item">
+                    <a class="mob-menu-nav__link" href="">Integrations</a>
+                  </li>
+                  <li class="mob-menu-nav__item">
+                    <a class="mob-menu-nav__link" href="">Pricing</a>
+                  </li>
+                  <li class="mob-menu-nav__item">
+                    <a class="mob-menu-nav__link" href="">Company</a>
+                  </li>
+                  <li class="mob-menu-nav__item">
+                    <a class="mob-menu-nav__link" href="">Blog</a>
+                  </li>
+                  <li class="mob-menu-nav__item">
+                    <a class="mob-menu-nav__link" href="">Get a demo</a>
+                  </li>
+                  <li class="mob-menu-nav__item">
+                    <a class="mob-menu-nav__link" href="">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!------------- Button open mobile menu ------------->
+          <button type="button" class="header__menu-btn">
+            <svg class="header__menu-btn--open">
+              <use href="./img/sprites.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!------------- Main ------------->
+    <main>
+      <!------------- Herro section ------------->
+      <section class="herro-section" id="features">
+        <div class="container herro-container">
+          <img
+            class="herro-img"
+            src="./img/user-foto.PNG"
+            alt="Gorshkoder Oleksandr"
+          />
+
+          <h1 class="herro-section__title">Oleksandr Gorshkoder</h1>
+          <h2 class="herro-section__text">Junior FULLSTACK developer</h2>
+
+          <div class="herro-contacts">
+            <ul class="herro-contacts__list">
+              <li class="herro-contacts__item">
+                <h3 class="herro-contacts__title">Location</h3>
+                <p class="herro-contacts__info"><a href="https://goo.gl/maps/mxJCtHM7kM54ssGA6" target="_blank">Cherkasy, Ukraine</a></p>
+              </li>
+              <li class="herro-contacts__item">
+                <h3 class="herro-contacts__title">Phone</h3>
+                <p class="herro-contacts__info">
+                  <a href="tel:+380674552288">067 455 22 88</a>
+                </p>
+              </li>
+              <li class="herro-contacts__item">
+                <h3 class="herro-contacts__title">Email</h3>
+                <p class="herro-contacts__info"> <a href="mailto:s.gorshkoder@gmail.com">s.gorshkoder@gmail.com</a></p>
+              </li>
+              <li class="herro-contacts__item">
+                <h3 class="herro-contacts__title">Linkedin</h3>
+                <p class="herro-contacts__info"><a href="#linkedin">#linkedin</a></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!------------- Button page up ------------->
+      <button type="button" class="page-up visually-hidden">
+        <img src="./img/up-arrow.svg" alt="page-up" />
+      </button>
+    </main>
+
+    <footer>
+      <div class="footer">footer</div>
+    </footer>
+  </body>
 </html>

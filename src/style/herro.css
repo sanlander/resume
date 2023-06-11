@@ -1,0 +1,186 @@
+.herro-section {
+  background-color: #edeff4;
+  height: 400px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .herro-section {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .herro-section {
+    height: 430px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .herro-section {
+    height: 530px;
+  }
+}
+
+.herro-container {
+  position: relative;
+  height: 100%;
+}
+
+.herro-img {
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  height: 440px;
+}
+
+.herro-section__title {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  font-family: "Lato Bold";
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.62;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--active-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .herro-section__title {
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .herro-section__title {
+    font-size: 48px;
+    line-height: 1.35;
+  }
+}
+.herro-section__text {
+  position: absolute;
+  top: 180px;
+  left: 150px;
+  font-family: "Lato Medium";
+  text-transform: uppercase;
+  letter-spacing: 14px;
+  font-size: 32px;
+  line-height: 1.5;
+  color: var(--current-text-color);
+}
+@media screen and (min-width: 768px) {
+  .herro-section__text {
+    font-size: 28px;
+    line-height: 1.88;
+  }
+}
+
+.herro-contacts {
+  position: absolute;
+  width: 800px;
+  top: 370px;
+  left: 150px;
+}
+.herro-contacts::before {
+  content: "";
+  display: block;
+  width: 800px;
+  height: 4px;
+  background-color: var(--current-text-color);
+  border-radius: 5px;
+  margin-bottom: 36px;
+}
+.herro-contacts__list {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+}
+
+.herro-contacts__item {
+  list-style: none;
+}
+.herro-contacts__title {
+  margin-bottom: 12px;
+  color: var(--text-color-black);
+  font-size: 18px;
+}
+.herro-contacts__info a {
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--current-text-color);
+}
+
+/************** Old rules ***************/
+.herro-section__button {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  color: var(--primary-color-white);
+  background-color: #000000;
+  cursor: pointer;
+  padding: 16px 24px;
+  transition: background-color var(--transition-primary);
+}
+@media screen and (min-width: 768px) {
+  .herro-section__button {
+    font-size: 16px;
+  }
+}
+.herro-image-left {
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  .herro-image-left {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 240px;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .herro-image-left {
+    top: 185px;
+    width: 300px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .herro-image-left {
+    left: 64px;
+    top: 200px;
+    width: 390px;
+    height: 255px;
+  }
+}
+.herro-image-right {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .herro-image-right {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .herro-image-right {
+    right: 16px;
+    top: 136px;
+    width: 264px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .herro-image-right {
+    right: 40px;
+    top: 152px;
+    width: 340px;
+    height: 260px;
+  }
+}
