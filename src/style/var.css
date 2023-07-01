@@ -1,9 +1,16 @@
 :root {
-  --bg-color: #fffff;
-  --active-text-color: #009BDE;
+  --bg-color: #ffffff;
+  --active-text-color: #009bde;
   --current-text-color: #979797;
 
   --text-color-black: #181818;
   --primary-color-white: #ffffff;
   --transition-primary: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.dark:root {
+  --bg-color: #262626;
+  --active-text-color: #e0a80d;
+  --current-text-color: #a4a5a6;
+  --text-color-black: #848485;
 }

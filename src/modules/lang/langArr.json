@@ -1,0 +1,19 @@
+{
+  "titlePage": {
+    "en": "Gorshkoder Oleksandr",
+    "ua": "Горшкодер Олександр"
+  },
+  "select": { "en": "en", "ua": "ua" },
+  "herro-title": {
+    "en": "Gorshkoder Oleksandr",
+    "ua": "Горшкодер Олександр"
+  },
+  "location": {
+    "en": "Location",
+    "ua": "Місцезнаходження"
+  },
+  "link_home": {
+    "en": "Home",
+    "ua": "Головна"
+  }
+}

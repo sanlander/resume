@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,7 +7,7 @@
 
     <link rel="icon" href="img/favicon.png" type="image/png" />
 
-    <title>Gorshkoder Oleksandr</title>
+    <title class="titlePage" data-lng="titlePage">Gorshkoder Oleksandr</title>
   </head>
   <body>
     <!------------- Header ------------->
@@ -24,7 +24,12 @@
           <nav class="nav">
             <ul class="nav-menu list">
               <li class="nav-menu__item">
-                <a href="" class="nav-menu__link current-link">Features</a>
+                <a
+                  href=""
+                  class="nav-menu__link current-link"
+                  data-lng="link_home"
+                  >Home</a
+                >
               </li>
               <li class="nav-menu__item">
                 <a href="" class="nav-menu__link">Integrations</a>
@@ -38,9 +43,6 @@
               <li class="nav-menu__item">
                 <a href="" class="nav-menu__link">Blog</a>
               </li>
-              <li class="nav-menu__item">
-                <a href="" class="nav-menu__link demo">Get a demo</a>
-              </li>
             </ul>
             <!------------- Header authorization(Login) ------------->
             <div class="authorization">
@@ -51,8 +53,27 @@
                 Login</a
               >
             </div>
+            <!------- Change language ------->
+            <div class="select">
+              <div class="select__header">
+                <span class="select__current" data-lng="select">en</span>
+              </div>
 
-            <!------- Mobile menu ------->
+              <div class="select__body">
+                <div class="select__item">en</div>
+                <div class="select__item">ua</div>
+              </div>
+            </div>
+
+            <!------- Dark Switch ------->
+            <div class="dark-switch">
+              <svg class="dark-switch__icon">
+                <use href="./img/sprites.svg#icon-sun"></use>
+              </svg>
+              <div class="dark-switch__label"></div>
+            </div>
+
+            <!------- Mobile menu (start) ------->
             <div class="mob-menu is-hidden">
               <div class="container">
                 <!----- Button close menu ----->
@@ -79,14 +100,12 @@
                     <a class="mob-menu-nav__link" href="">Blog</a>
                   </li>
                   <li class="mob-menu-nav__item">
-                    <a class="mob-menu-nav__link" href="">Get a demo</a>
-                  </li>
-                  <li class="mob-menu-nav__item">
                     <a class="mob-menu-nav__link" href="">Login</a>
                   </li>
                 </ul>
               </div>
             </div>
+            <!------- Mobile menu (finish) ------->
           </nav>
           <!------------- Button open mobile menu ------------->
           <button type="button" class="header__menu-btn">
@@ -109,14 +128,24 @@
             alt="Gorshkoder Oleksandr"
           />
 
-          <h1 class="herro-section__title">Oleksandr Gorshkoder</h1>
+          <h1 class="herro-section__title" data-lng="herro-title">
+            Oleksandr Gorshkoder
+          </h1>
           <h2 class="herro-section__text">Junior FULLSTACK developer</h2>
 
           <div class="herro-contacts">
             <ul class="herro-contacts__list">
               <li class="herro-contacts__item">
-                <h3 class="herro-contacts__title">Location</h3>
-                <p class="herro-contacts__info"><a href="https://goo.gl/maps/mxJCtHM7kM54ssGA6" target="_blank">Cherkasy, Ukraine</a></p>
+                <h3 class="herro-contacts__title" data-lng="location">
+                  Location
+                </h3>
+                <p class="herro-contacts__info">
+                  <a
+                    href="https://goo.gl/maps/mxJCtHM7kM54ssGA6"
+                    target="_blank"
+                    >Cherkasy, Ukraine</a
+                  >
+                </p>
               </li>
               <li class="herro-contacts__item">
                 <h3 class="herro-contacts__title">Phone</h3>
@@ -126,11 +155,17 @@
               </li>
               <li class="herro-contacts__item">
                 <h3 class="herro-contacts__title">Email</h3>
-                <p class="herro-contacts__info"> <a href="mailto:s.gorshkoder@gmail.com">s.gorshkoder@gmail.com</a></p>
+                <p class="herro-contacts__info">
+                  <a href="mailto:s.gorshkoder@gmail.com"
+                    >s.gorshkoder@gmail.com</a
+                  >
+                </p>
               </li>
               <li class="herro-contacts__item">
                 <h3 class="herro-contacts__title">Linkedin</h3>
-                <p class="herro-contacts__info"><a href="#linkedin">#linkedin</a></p>
+                <p class="herro-contacts__info">
+                  <a href="#linkedin">#linkedin</a>
+                </p>
               </li>
             </ul>
           </div>
@@ -143,6 +178,19 @@
     </main>
 
     <footer>
+      <div class="form">
+        <form action="" class="form-test">
+          <label for="inpMask" class="label-test__mask"
+            >Тестовий input з маской телефону
+            <input id="inpMask" class="input-test__mask" type="tel" />
+          </label>
+
+          <button class="form-test_button-submit" type="submit">
+            Відправити форму
+          </button>
+        </form>
+      </div>
+
       <div class="footer">footer</div>
     </footer>
   </body>
