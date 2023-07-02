@@ -1,4 +1,5 @@
 {
+  "htmlLang": { "en": "en", "ua": "uk" },
   "titlePage": {
     "en": "Gorshkoder Oleksandr",
     "ua": "Горшкодер Олександр"
@@ -8,6 +9,7 @@
     "en": "Gorshkoder Oleksandr",
     "ua": "Горшкодер Олександр"
   },
+  "btn-contact": { "en": "Contact with me", "ua": "Зв'язатись зі мною" },
   "location": {
     "en": "Location",
     "ua": "Місцезнаходження"

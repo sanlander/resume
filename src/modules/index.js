@@ -1,7 +1,7 @@
 import "./progressBar";
+import "./scrollUpBtn";
 import "./animateText";
-import "./lang/language";
-import "./lang/langArr";
+import "./lang/changeLanguage";
 import "./darkSwitch";
 import "./libs/inputmask.min";
-import "./inputMask";
+import "./formFeedback";

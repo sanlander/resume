@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -48,7 +48,7 @@
             <div class="authorization">
               <a href="" class="nav-menu__link">
                 <svg class="login__icon">
-                  <use href="./img/sprites.svg#icon-sprite"></use>
+                  <use href="./img/sprites.svg#icon-user"></use>
                 </svg>
                 Login</a
               >
@@ -74,7 +74,7 @@
             </div>
 
             <!------- Mobile menu (start) ------->
-            <div class="mob-menu is-hidden">
+            <div class="mob-menu visually-hidden">
               <div class="container">
                 <!----- Button close menu ----->
                 <button type="button" class="menu-close-btn">
@@ -133,6 +133,15 @@
           </h1>
           <h2 class="herro-section__text">Junior FULLSTACK developer</h2>
 
+          <button
+          type="button"
+          class="herro-section__button"
+          data-lng="btn-contact"
+          data-modal-open
+        >
+          Contact with me
+        </button>
+
           <div class="herro-contacts">
             <ul class="herro-contacts__list">
               <li class="herro-contacts__item">
@@ -178,17 +187,23 @@
     </main>
 
     <footer>
-      <div class="form">
-        <form action="" class="form-test">
-          <label for="inpMask" class="label-test__mask"
-            >Тестовий input з маской телефону
-            <input id="inpMask" class="input-test__mask" type="tel" />
-          </label>
+      <!----------- Form Feedback ----------->
+      <div class="backrdop visually-hidden" data-modal>
+        <div class="feedback">
+          <svg class="feedback__close-modal" data-modal-close>
+            <use href="./img/sprites.svg#icon-close-modal"></use>
+          </svg>
+          <form action="" class="form-feedback">
+            <label for="inpMask" class="feedback-label__mask"
+              >Тестовий input з маской телефону
+              <input id="inpMask" class="feedback-input__mask" type="tel" />
+            </label>
 
-          <button class="form-test_button-submit" type="submit">
-            Відправити форму
-          </button>
-        </form>
+            <button class="feedback-button__submit" type="submit">
+              Відправити форму
+            </button>
+          </form>
+        </div>
       </div>
 
       <div class="footer">footer</div>

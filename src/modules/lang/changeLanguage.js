@@ -1,4 +1,4 @@
-import langArr from "./langArr";
+import langData from "./langData";
 
 const select = document.querySelector(".select");
 const selectHeader = document.querySelector(".select__header");
@@ -30,18 +30,22 @@ changeLanguage();
 function changeLanguage() {
   const href = window.location.hash;
 
-  const clearHash = href.slice(1, 3);
+  const clearHash = href.slice(1, href.length);
 
   if (!allLang.includes(clearHash)) {
     if (clearHash.length !== 0) location.href = window.location.pathname;
     return;
   }
 
-  for (let key in langArr) {
+  document
+    .querySelector("html")
+    .setAttribute("lang", langData.htmlLang[clearHash]);
+
+  for (let key in langData) {
     let elem = document.querySelector(`[data-lng="${key}"]`);
 
     if (elem) {
-      elem.innerText = langArr[key][clearHash];
+      elem.innerText = langData[key][clearHash];
     }
   }
 }
