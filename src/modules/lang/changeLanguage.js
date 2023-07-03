@@ -45,7 +45,7 @@ function changeLanguage() {
     let elem = document.querySelector(`[data-lng="${key}"]`);
 
     if (elem) {
-      elem.innerText = langData[key][clearHash];
+      elem.innerHTML = langData[key][clearHash];
     }
   }
 }

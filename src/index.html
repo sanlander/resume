@@ -27,7 +27,7 @@
                 <a
                   href=""
                   class="nav-menu__link current-link"
-                  data-lng="link_home"
+                  data-lng="linkHome"
                   >Home</a
                 >
               </li>
@@ -128,19 +128,19 @@
             alt="Gorshkoder Oleksandr"
           />
 
-          <h1 class="herro-section__title" data-lng="herro-title">
+          <h1 class="herro-section__title" data-lng="herroTitle">
             Oleksandr Gorshkoder
           </h1>
           <h2 class="herro-section__text">Junior FULLSTACK developer</h2>
 
           <button
-          type="button"
-          class="herro-section__button"
-          data-lng="btn-contact"
-          data-modal-open
-        >
-          Contact with me
-        </button>
+            type="button"
+            class="herro-section__button"
+            data-lng="btnContact"
+            data-modal-open
+          >
+            Contact with me
+          </button>
 
           <div class="herro-contacts">
             <ul class="herro-contacts__list">
@@ -194,15 +194,40 @@
             <use href="./img/sprites.svg#icon-close-modal"></use>
           </svg>
           <form action="" class="form-feedback">
-            <label for="inpMask" class="feedback-label__mask"
-              >Тестовий input з маской телефону
-              <input id="inpMask" class="feedback-input__mask" type="tel" />
+            <label class="feedback-label" data-lng="feedbackLableName"
+              >Your name
             </label>
+            <input name="name" class="feedback-input" type="text" />
 
-            <button class="feedback-button__submit" type="submit">
-              Відправити форму
+            <label class="feedback-label">Email </label>
+            <input name="email" class="feedback-input" type="email" />
+
+            <label
+              class="feedback-label js-mask-label__tel"
+              data-lng="feedbackLablePhone"
+              >Your phone
+            </label>
+            <input class="feedback-input js-mask-input__tel" type="tel" />
+
+            <button
+              class="feedback-button__submit"
+              type="submit"
+              data-lng="feedbackBtnSubmit"
+            >
+              Send
             </button>
           </form>
+
+          <div class="feedback-msg-success">
+            <svg class="">
+              <use href="./img/sprites.svg#icon-checkbox-checked"></use>
+            </svg>
+
+            <div class="feedback-msg-send" data-lng="feedbackMsgSuccess">
+              <p>Thanks!</p>
+              <p>Form is succeful send!</p>
+            </div>
+          </div>
         </div>
       </div>
 
