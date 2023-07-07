@@ -207,7 +207,11 @@
               data-lng="feedbackLablePhone"
               >Your phone
             </label>
-            <input class="feedback-input js-mask-input__tel" type="tel" />
+            <input
+              name="phone"
+              class="feedback-input js-mask-input__tel"
+              type="tel"
+            />
 
             <button
               class="feedback-button__submit"
@@ -219,13 +223,23 @@
           </form>
 
           <div class="feedback-msg-success">
-            <svg class="">
+            <svg>
               <use href="./img/sprites.svg#icon-checkbox-checked"></use>
             </svg>
 
             <div class="feedback-msg-send" data-lng="feedbackMsgSuccess">
               <p>Thanks!</p>
               <p>Form is succeful send!</p>
+            </div>
+          </div>
+          <div class="spinner-box">
+            <div class="spinner">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
           </div>
         </div>

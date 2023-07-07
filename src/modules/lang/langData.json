@@ -19,7 +19,7 @@
     "ua": "Головна"
   },
   "feedbackMsgError": {
-    "en": "Enter all symbols (min 9)",
+    "en": "Enter all number (min 9)",
     "ua": "Введіть номер повнісьтю (мін 9)"
   },
   "feedbackLableName": { "en": "Your name", "ua": "Ваше ім'я" },
@@ -28,5 +28,9 @@
   "feedbackMsgSuccess": {
     "en": "<p>Thanks!</p><p>Form is succeful send!</p>",
     "ua": "<p>Дякуємо!</p><p>Форма успішно відправлена!</p>"
+  },
+  "feedbackMsgErrorSendForm": {
+    "en": "<svg style=\"fill:#de3f3f\"><use href=\"assets/sprites.svg#icon-cross\"></use></svg><span style=\"color:#de3f3f\"><p>Sorry!</p><p>Something went wrong..</p><span>",
+    "ua": "<svg style=\"fill:#de3f3f\"><use href=\"assets/sprites.svg#icon-cross\"></use></svg><span style=\"color:#de3f3f\"><p>Вибачте!</p><p>Щось пішло не так..</p><span>"
   }
 }
