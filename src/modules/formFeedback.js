@@ -6,13 +6,20 @@ const feedbackBox = document.querySelector(".feedback");
 const closeModalBtn = document.querySelector("[data-modal-close]");
 const modal = document.querySelector("[data-modal]");
 const form = document.querySelector(".form-feedback");
-const inputTel = document.querySelector(".js-mask-input__tel");
-const inputMask = new Inputmask("+38 (099) 999 - 99 - 99");
+const inputName = document.querySelector('.feedback-input[type="text"]');
+const inputEmail = document.querySelector('.feedback-input[type="email"]');
+const inputTel = document.querySelector('.feedback-input[type="tel"]');
+const inputMask = new Inputmask("+38 (999) 999 - 99 - 99");
 inputMask.mask(inputTel);
+
+const href = window.location.hash;
+const clearHash = href.slice(1, href.length);
 
 // addEventListeners
 openModalBtn.addEventListener("click", openModal);
 closeModalBtn.addEventListener("click", closeModal);
+inputName.addEventListener("input", onChangeInputName);
+inputEmail.addEventListener("input", onChangeInputEmail);
 inputTel.addEventListener("input", onChangeInputTel);
 form.addEventListener("submit", onSubmitForm);
 
@@ -43,73 +50,61 @@ function onPressEsc(e) {
   if (e.keyCode === 27) closeModal();
 }
 
+function onChangeInputName(e) {
+  const nameFromInput = e.target.value;
+  if (validName(nameFromInput)) {
+    removeInputError(e.target);
+  }
+}
+function onChangeInputEmail(e) {
+  const emailFromInput = e.target.value;
+  if (validEmail(emailFromInput)) {
+    removeInputError(e.target);
+  }
+}
 function onChangeInputTel(e) {
   const phoneNumber = inputTel.inputmask.unmaskedvalue();
-  if (phoneNumber.length >= 9) {
-    const msgErr = document.querySelector(".msg-error");
-    if (msgErr) {
-      msgErr.remove();
-      inputTel.classList.remove("error");
-    }
+  if (validPhone(phoneNumber)) {
+    removeInputError(e.target);
   }
 }
 
+// Відправка форми
 function onSubmitForm(e) {
   e.preventDefault();
-  const href = window.location.hash;
-  const clearHash = href.slice(1, href.length);
 
   const nameFromInput = e.target.elements.name.value;
   const emailFromInput = e.target.elements.email.value;
   const phoneFromInput = inputTel.inputmask.unmaskedvalue();
 
-  //Провіряємо довжину телефону
-  if (phoneFromInput.length < 9) {
-    createNewErrorInput("feedbackMsgError", e.target.elements.phone, clearHash);
-    return;
-  }
-
-  inputTel.classList.remove("error");
-
-  const msgErr = document.querySelector(".msg-error");
-  if (msgErr) msgErr.remove();
-
-  if (nameFromInput.length < 3) {
-    return;
-  }
-
-  //Відправка форми в телеграм
-  let message = `✅ <b>RESUME:</b>
-
-👨‍💼  Ім'я: ${nameFromInput}
-📞  Телефон: +380${phoneFromInput}`;
-
-  const URL = `https://api.telegram.org/${process.env.TG_API_BOT}/sendMessage`;
-  const ID = process.env.CHAT_ID;
-  console.log("process.env.CHAT_ID:", process.env.CHAT_ID);
+  if (!validDataForm(e, nameFromInput, emailFromInput, phoneFromInput)) return;
 
   async function sendData() {
     const loader = document.querySelector(".spinner-box");
     const messageBox = document.querySelector(".feedback-msg-success");
+    const URL = process.env.API_TG;
 
     try {
       document.querySelector(".spinner-box").style.display = "flex";
 
       await axios.post(URL, {
-        chat_id: ID,
-        parse_mode: "html",
-        text: message,
+        name: nameFromInput,
+        email: emailFromInput,
+        phone: phoneFromInput,
       });
 
-      loader.style.display = "none";
-      messageBox.style.display = "flex";
-    } catch (err) {
-      console.error(err);
-      loader.style.display = "none";
       messageBox.innerHTML =
-        langData.feedbackMsgErrorSendForm[clearHash || "en"];
-      messageBox.style.display = "flex";
+        langData.feedbackMsgSendFormSuccess[clearHash || "en"];
+    } catch (err) {
+      console.error("err:", err);
+      const error = err.response.data.status;
+
+      messageBox.innerHTML = `${
+        langData.feedbackMsgSendFormError[clearHash || "en"]
+      }<hr> Error: ${error}`;
     } finally {
+      messageBox.style.display = "flex";
+      loader.style.display = "none";
       form.reset();
       setTimeout(() => {
         closeModal();
@@ -120,8 +115,60 @@ function onSubmitForm(e) {
   sendData();
 }
 
-// Створюєму нову помилку над/в input
-function createNewErrorInput(lngTextError, currentElement, hash) {
+// Вілідація даних з форми
+function validDataForm(e, name, email, tel) {
+  let validate = true;
+
+  if (!validName(name)) {
+    createNewInputError(
+      "feedbackMsgErrorName",
+      e.target.elements.name,
+      clearHash
+    );
+    validate = false;
+  }
+
+  if (!validEmail(email)) {
+    createNewInputError(
+      "feedbackMsgErrorEmail",
+      e.target.elements.email,
+      clearHash
+    );
+    validate = false;
+  }
+
+  if (!validPhone(tel)) {
+    createNewInputError(
+      "feedbackMsgErrorTel",
+      e.target.elements.phone,
+      clearHash
+    );
+    validate = false;
+  }
+  return validate;
+}
+// Вілідація імені
+function validName(name) {
+  if (name.trim().length >= 2) return true;
+
+  return false;
+}
+// Вілідація телефону
+function validPhone(tel) {
+  if (tel.length >= 10) return true;
+
+  return false;
+}
+// Вілідація email
+function validEmail(email) {
+  const validateEmailRegex = /^\S+@\S+\.\S+$/;
+
+  if (validateEmailRegex.test(email)) return true;
+
+  return false;
+}
+// Створюєму нову помилку над input в label
+function createNewInputError(lngTextError, currentElement, hash) {
   const parentEl = currentElement.previousElementSibling;
 
   if (!parentEl.firstElementChild?.classList.contains("msg-error")) {
@@ -133,5 +180,15 @@ function createNewErrorInput(lngTextError, currentElement, hash) {
     currentElement.classList.add("error");
 
     parentEl.insertAdjacentElement("beforeend", newMsgErr);
+  }
+}
+// Видаляємо помилку над input в label
+function removeInputError(currentElement) {
+  const parentEl = currentElement.previousElementSibling;
+
+  if (parentEl.firstElementChild?.classList.contains("msg-error")) {
+    parentEl.firstElementChild.remove();
+
+    currentElement.classList.remove("error");
   }
 }

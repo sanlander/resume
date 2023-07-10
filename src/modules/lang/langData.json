@@ -18,18 +18,29 @@
     "en": "Home",
     "ua": "Головна"
   },
-  "feedbackMsgError": {
-    "en": "Enter all number (min 9)",
-    "ua": "Введіть номер повнісьтю (мін 9)"
+  "feedbackMsgErrorTel": {
+    "en": "Enter all number (min 10)",
+    "ua": "Введіть номер повнісьтю (мін 10)"
   },
-  "feedbackLableName": { "en": "Your name", "ua": "Ваше ім'я" },
+  "feedbackMsgErrorName": {
+    "en": "Enter min 2 letters",
+    "ua": "Введіть мін 2 букви"
+  },
+  "feedbackMsgErrorEmail": {
+    "en": "Enter correct email",
+    "ua": "Введіть правильний email"
+  },
+  "feedbackLableName": {
+    "en": "Your name (min 2 letters)",
+    "ua": "Ваше ім'я (мін 2 букви)"
+  },
   "feedbackLablePhone": { "en": "Your phone", "ua": "Ваш телефон" },
   "feedbackBtnSubmit": { "en": "Send", "ua": "Відправити" },
-  "feedbackMsgSuccess": {
-    "en": "<p>Thanks!</p><p>Form is succeful send!</p>",
-    "ua": "<p>Дякуємо!</p><p>Форма успішно відправлена!</p>"
+  "feedbackMsgSendFormSuccess": {
+    "en": "<svg><use href=\"assets/sprites.svg#icon-checkbox-checked\"></use></svg><p>Thanks!</p><p>Form is succeful send!</p>",
+    "ua": "<svg><use href=\"assets/sprites.svg#icon-checkbox-checked\"></use></svg><p>Дякуємо!</p><p>Форма успішно відправлена!</p>"
   },
-  "feedbackMsgErrorSendForm": {
+  "feedbackMsgSendFormError": {
     "en": "<svg style=\"fill:#de3f3f\"><use href=\"assets/sprites.svg#icon-cross\"></use></svg><span style=\"color:#de3f3f\"><p>Sorry!</p><p>Something went wrong..</p><span>",
     "ua": "<svg style=\"fill:#de3f3f\"><use href=\"assets/sprites.svg#icon-cross\"></use></svg><span style=\"color:#de3f3f\"><p>Вибачте!</p><p>Щось пішло не так..</p><span>"
   }

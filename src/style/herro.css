@@ -205,7 +205,7 @@ html.dark .herro-section {
   right: 8px;
   top: 6px;
   color: #de3f3f;
-  padding: 2px 4px;
+  padding: 4px 8px;
   border-radius: 8px;
   background: var(--primary-color-white);
 }
@@ -289,13 +289,6 @@ html.dark .herro-section {
   fill: green;
   width: 45px;
   height: 45px;
-}
-
-.feedback-msg-send {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
 }
 
 /****  spinner ****/

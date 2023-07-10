@@ -32,10 +32,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
     }),
-    new Dotenv({
-      path: "./.env", // Path to .env file (this is the default)
-      safe: true, // load .env.example (defaults to "false" which does not use dotenv-safe)
-    }),
+    new Dotenv(),
+
     // new CopyPlugin({
     //   patterns: [{ from: 'static', to: './' }],
     // }),
