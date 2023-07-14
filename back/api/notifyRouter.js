@@ -1,13 +1,16 @@
 const express = require("express");
 const router = new express.Router();
 
-const { validateDataForm } = require("../middlewares/validationDataForm");
+const {
+  validateToTelegram,
+  validateToEmail,
+} = require("../middlewares/validationDataForm");
 const {
   sendToTelegram,
   sendToEmail,
 } = require("../models/formDataControllers");
 
-router.post("/telegram", validateDataForm, sendToTelegram);
-router.post("/email", sendToEmail);
+router.post("/telegram", validateToTelegram, sendToTelegram);
+router.post("/email", validateToEmail, sendToEmail);
 
 module.exports = router;

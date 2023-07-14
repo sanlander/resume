@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    title Email
+
+    include _style
+
+  body
+    span.preheader
+    table.body(role="presentation", border="0", cellpadding="0", cellspacing="0")
+      tr
+        td
+        td.container
+          .content
+            // START CENTERED WHITE CONTAINER
+            table.main(role="presentation")
+              // START MAIN CONTENT AREA
+              tr
+                td.wrapper
+                  table(role="presentation", border="0", cellpadding="0", cellspacing="0")
+                    tr
+                      td
+                        block content
+              // END MAIN CONTENT AREA
+              // END CENTERED WHITE CONTAINER
+              // START FOOTER
+              .footer
+                table(role="presentation", border="0", cellpadding="0", cellspacing="0")
+                  tr
+                    td.content-block
+                      span.apple-link &copy; #{currentYear} All rights reserved | Cherkasy, Ukraine, 18000
+                      br
+                      a.link-from(href="https://gorshkoder.pp.ua") www.gorshkoder.pp.ua
+                  tr
+                    td.content-block.powered-by
+                      | Sent from
+                      a(href="https://gorshkoder.pp.ua")  RESUME
+              // END FOOTER
+        td

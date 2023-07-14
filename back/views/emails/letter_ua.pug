@@ -1,0 +1,16 @@
+extends layout/base
+
+block content
+  p Привіт #{name}!
+  p Запит на зворотній зв'язок від #{email} отримано та буде опрацьовано найближчим часом.
+  table.btn.btn-primary(role="presentation", border="0", cellpadding="0", cellspacing="0")
+    tbody
+      tr
+        td(align="left")
+          table(role="presentation", border="0", cellpadding="0", cellspacing="0")
+            tbody
+              tr
+                td
+                  a(href="https://gorshkoder.pp.ua", target="_blank") Перейти на сайт
+  p Якщо ви не створювали цей запит, просто проігноруйте це повідомлення...
+  p Успіхів!

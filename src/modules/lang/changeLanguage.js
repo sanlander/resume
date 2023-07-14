@@ -4,7 +4,7 @@ const select = document.querySelector(".select");
 const selectHeader = document.querySelector(".select__header");
 const selectBody = document.querySelector(".select__body");
 
-const allLang = ["en", "ua"];
+export const allLang = ["en", "ua"];
 
 selectHeader.addEventListener("mouseenter", selectToggle);
 selectBody.addEventListener("click", selectChoose);

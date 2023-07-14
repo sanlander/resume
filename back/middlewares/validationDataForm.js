@@ -9,7 +9,7 @@ const validateResultJoi = (schema, req, res, next) => {
   return next();
 };
 
-const validateDataForm = (req, res, next) => {
+const validateToTelegram = (req, res, next) => {
   const schema = Joi.object({
     name: Joi.string().min(2).max(30).required(),
     email: Joi.string().max(30).email().required(),
@@ -19,6 +19,17 @@ const validateDataForm = (req, res, next) => {
   validateResultJoi(schema, req, res, next);
 };
 
+const validateToEmail = (req, res, next) => {
+  const schema = Joi.object({
+    name: Joi.string().min(2).max(30).required(),
+    email: Joi.string().max(30).email().required(),
+    lang: Joi.string().min(2),
+  });
+
+  validateResultJoi(schema, req, res, next);
+};
+
 module.exports = {
-  validateDataForm,
+  validateToTelegram,
+  validateToEmail,
 };

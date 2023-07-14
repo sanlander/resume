@@ -31,10 +31,10 @@ const sendToTelegram = async (req, res, next) => {
 };
 
 const sendToEmail = async (req, res, next) => {
-  const { email } = req.body;
+  const { name, email, lang } = req.body;
 
   try {
-    await sendEmail(email);
+    await sendEmail(name, email, lang);
 
     res.status(200).json({
       status: "success",

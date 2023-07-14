@@ -1,0 +1,16 @@
+extends layout/base
+
+block content
+  p Hello #{name}!
+  p The feedback request from #{email} has been received and will be processed shortly.
+  table.btn.btn-primary(role="presentation", border="0", cellpadding="0", cellspacing="0")
+    tbody
+      tr
+        td(align="left")
+          table(role="presentation", border="0", cellpadding="0", cellspacing="0")
+            tbody
+              tr
+                td
+                  a(href="https://gorshkoder.pp.ua", target="_blank") Go to the website
+  p If you didn't create this request, just ignore this message..
+  p Good luck!
