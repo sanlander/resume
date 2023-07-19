@@ -4,7 +4,8 @@
     "en": "Gorshkoder Oleksandr",
     "ua": "Горшкодер Олександр"
   },
-  "select": { "en": "en", "ua": "ua" },
+  "selectLang": { "en": "en", "ua": "ua" },
+  "selectLangMob": { "en": "en", "ua": "ua" },
   "herroTitle": {
     "en": "Gorshkoder Oleksandr",
     "ua": "Горшкодер Олександр"
@@ -15,6 +16,10 @@
     "ua": "Місцезнаходження"
   },
   "linkHome": {
+    "en": "Home",
+    "ua": "Головна"
+  },
+  "linkHomeMob": {
     "en": "Home",
     "ua": "Головна"
   },

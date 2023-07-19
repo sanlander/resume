@@ -34,7 +34,7 @@ module.exports = async function sendEmail(name, email, lang) {
     await transporter.sendMail({
       from: process.env.EMAIL_FROM,
       to: email, // `${email}, s.gorshkoder@gmail.com`
-      subject: `${langDataBack.subjectLetter[lang]} RESUME (gorshkoder.pp.ua) ✔`,
+      subject: `${langDataBack.subjectLetter[lang]} gorshkoder.pp.ua ✔`,
       html,
       text: convert(html),
     });

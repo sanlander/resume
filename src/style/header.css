@@ -48,8 +48,7 @@
   }
 }
 
-.nav-menu,
-.authorization {
+.nav-menu {
   display: none;
 }
 .nav {
@@ -64,6 +63,7 @@
     display: flex;
     gap: 8px;
     align-items: center;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -72,13 +72,8 @@
     gap: 32px;
   }
 }
-@media screen and (min-width: 768px) {
-  .authorization {
-    display: block;
-  }
-}
-.nav-menu__item,
-.authorization {
+
+.nav-menu__item {
   position: relative;
   font-weight: 500;
   letter-spacing: 0.03em;
@@ -125,16 +120,6 @@
   left: 0;
 }
 
-.login__icon {
-  width: 14px;
-  height: 14px;
-  margin-right: 4px;
-  fill: currentColor;
-}
-.login__icon:hover {
-  color: #2f70fe;
-}
-
 .progress {
   position: fixed;
   left: 0;
@@ -144,12 +129,28 @@
   border-radius: 3px;
   background-image: linear-gradient(to bottom, #0057b7 50%, #ffdd00 50%);
 }
-/* ------- Language ------- */
-.select {
+/******************  Box Dark Switch + Language  ******************/
+.box__dark-swich-language {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/******************  Language  ******************/
+.select-language {
+  display: none;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .select-language {
+    display: inline-flex;
+  }
+}
+.select-language.mob {
+  display: inline-flex;
+}
 
-.select__header {
+.select-language__header {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -161,13 +162,13 @@
   padding: 6px 14px;
 }
 
-.select__current {
+.select-language__current {
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
 }
 
-.select__body {
+.select-language__body {
   position: absolute;
   display: none;
   left: 0;
@@ -181,11 +182,11 @@
 
   transition: opacity 1s ease;
 }
-.select.is-active .select__body {
+.select-language.is-active .select-language__body {
   display: block;
 }
 
-.select__item {
+.select-language__item {
   cursor: pointer;
   font-size: 14px;
   line-height: 24px;
@@ -195,15 +196,26 @@
   transition: all var(--transition-primary);
 }
 
-.select__item:hover {
+.select-language__item:hover {
   background-color: #f2f2f2;
   color: var(--active-text-color);
 }
 
-/*********** Dark Switch *************/
+/******************  Dark Switch  ******************/
 .dark-switch {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  margin-left: auto;
+  margin-right: 18px;
+}
+@media screen and (min-width: 768px) {
+  .dark-switch {
+    margin-left: 12px;
+    margin-right: 0;
+  }
+}
+.dark-switch.mob {
+  margin: 0;
 }
 .dark-switch__label {
   position: relative;

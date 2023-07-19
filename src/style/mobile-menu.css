@@ -1,4 +1,4 @@
-.header__menu-btn {
+.mob-menu-btn__open {
   padding: 0;
   background-color: transparent;
   border: none;
@@ -8,21 +8,21 @@
 }
 
 @media screen and (min-width: 768px) {
-  .header__menu-btn {
+  .mob-menu-btn__open {
     display: none;
   }
 }
-.header__menu-btn--open {
+.mob-menu-btn__open svg {
   width: 32px;
   height: 32px;
-  fill: var(--text-color-dark-navy);
+  fill: var(--current-text-color);
 }
 
 .mob-menu {
   position: fixed;
   overflow-y: auto;
   top: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   z-index: 5;
   background-color: #2f70fe;

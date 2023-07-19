@@ -1,7 +1,9 @@
-const checkbox = document.querySelector(".dark-switch__label");
+const checkbox = document.querySelectorAll(".dark-switch__label");
 const html = document.querySelector("html");
 
-checkbox.addEventListener("click", onChangeDarkTheme);
+checkbox.forEach((element) => {
+  element.addEventListener("click", onChangeDarkTheme);
+});
 
 function onChangeDarkTheme(e) {
   if (html.classList.contains("dark")) {

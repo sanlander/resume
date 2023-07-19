@@ -93,17 +93,18 @@ function onSubmitForm(e) {
     try {
       document.querySelector(".spinner-box").style.display = "flex";
 
-      await axios.post(URL_TG, {
-        name,
-        email: emailFromInput,
-        phone: phoneFromInput,
-      });
-
-      await axios.post(URL_EMAIL, {
-        name,
-        email: emailFromInput,
-        lang: clearHash,
-      });
+      await Promise.all([
+        axios.post(URL_TG, {
+          name,
+          email: emailFromInput,
+          phone: phoneFromInput,
+        }),
+        axios.post(URL_EMAIL, {
+          name,
+          email: emailFromInput,
+          lang: clearHash,
+        }),
+      ]);
 
       messageBox.innerHTML = langData.feedbackMsgSendFormSuccess[clearHash];
     } catch (err) {
