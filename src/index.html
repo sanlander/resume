@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,7 +7,13 @@
 
     <link rel="icon" href="img/favicon.png" type="image/png" />
 
-    <title class="titlePage" data-lng="titlePage">Gorshkoder Oleksandr</title>
+    <title class="titlePage" data-lng="titlePage">
+      Gorshkoder Oleksandr - RESUME
+    </title>
+    <meta
+      name="description"
+      content="Горшкодер Олександр, gorshkoder, gorshkoder.pp.ua, Gorshkoder Oleksandr, Горшкодер Олександр резюме, Горшкодер Олександр сайт, Gorshkoder Oleksandr site resume"
+    />
   </head>
   <body>
     <!------------- Header ------------->
@@ -26,7 +32,7 @@
               <li class="nav-menu__item">
                 <a
                   href="#"
-                  class="nav-menu__link current-link"
+                  class="nav-menu__link"
                   data-lng="linkHome"
                   data-scroll="home"
                   >Home</a
@@ -164,15 +170,6 @@
           </h1>
           <h2 class="herro-section__text">Junior FULLSTACK developer</h2>
 
-          <button
-            type="button"
-            class="herro-section__button"
-            data-lng="btnContact"
-            data-modal-open
-          >
-            Contact with me
-          </button>
-
           <div class="herro-contacts">
             <ul class="herro-contacts__list">
               <li class="herro-contacts__item">
@@ -209,6 +206,15 @@
               </li>
             </ul>
           </div>
+
+          <button
+            type="button"
+            class="herro-section__button"
+            data-lng="btnContact"
+            data-modal-open
+          >
+            Contact with me
+          </button>
         </div>
         <!----------- Form Feedback (start) ----------->
         <div class="backrdop visually-hidden" data-modal>
@@ -266,7 +272,9 @@
       </section>
       <!------------- Button page up ------------->
       <button type="button" class="page-up visually-hidden">
-        <img src="./img/up-arrow.svg" alt="page-up" />
+        <svg>
+          <use href="./img/sprites.svg#icon-arrow-up2"></use>
+        </svg>
       </button>
     </main>
 
