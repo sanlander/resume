@@ -2,14 +2,14 @@ const progress = document.querySelector(".progress");
 
 window.addEventListener("scroll", progressBar);
 
-function progressBar(e) {
-  let windowScroll =
+function progressBar() {
+  const windowScroll =
     document.body.scrollTop || document.documentElement.scrollTop;
-  let windowHeight =
+  const windowHeight =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
 
-  let percent = (windowScroll / windowHeight) * 100;
+  const percent = (windowScroll / windowHeight) * 100;
 
   progress.style.width = percent + "%";
 }

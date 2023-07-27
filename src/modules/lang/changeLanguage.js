@@ -26,7 +26,7 @@ function selectToggle() {
 function selectToggleMob() {
   selectMob.classList.add("is-active");
 
-  addEventListener("click", onClickWithoutToggle);
+  document.addEventListener("click", onClickWithoutToggle);
 
   function onClickWithoutToggle(e) {
     console.log("Слухач");
@@ -34,7 +34,7 @@ function selectToggleMob() {
 
     if (!e.composedPath().includes(selectBodyMob))
       selectMob.classList.remove("is-active");
-    removeEventListener("click", onClickWithoutToggle);
+    document.removeEventListener("click", onClickWithoutToggle);
 
     console.log(e.composedPath().includes(selectBodyMob));
   }
@@ -42,8 +42,8 @@ function selectToggleMob() {
 
 function selectChoose(e) {
   const chooseLanguage = e.target.innerHTML;
-  location.href = window.location.pathname + "#" + chooseLanguage;
-  location.reload();
+  window.location.href = window.location.pathname + "#" + chooseLanguage;
+  window.location.reload();
 }
 
 changeLanguage();
@@ -54,7 +54,7 @@ function changeLanguage() {
   const clearHash = href.slice(1, href.length);
 
   if (!allLang.includes(clearHash)) {
-    if (clearHash.length !== 0) location.href = window.location.pathname;
+    if (clearHash.length !== 0) window.location.href = window.location.pathname;
     return;
   }
 
@@ -62,8 +62,8 @@ function changeLanguage() {
     .querySelector("html")
     .setAttribute("lang", langData.htmlLang[clearHash]);
 
-  for (let key in langData) {
-    let elem = document.querySelector(`[data-lng="${key}"]`);
+  for (const key in langData) {
+    const elem = document.querySelector(`[data-lng="${key}"]`);
 
     if (elem) {
       elem.innerHTML = langData[key][clearHash];

@@ -159,16 +159,17 @@
       <!------------- Herro section ------------->
       <section class="herro-section" id="home">
         <div class="container herro-container">
-          <img
-            class="herro-img"
-            src="./img/user-foto.PNG"
-            alt="Gorshkoder Oleksandr"
-          />
-
           <h1 class="herro-section__title" data-lng="herroTitle">
             Oleksandr Gorshkoder
           </h1>
-          <h2 class="herro-section__text">Junior FULLSTACK developer</h2>
+
+          <img
+            class="herro-img"
+            src="./img/foto.png"
+            alt="Gorshkoder Oleksandr"
+          />
+
+          <h2 class="herro-section__job">Junior FULLSTACK developer</h2>
 
           <div class="herro-contacts">
             <ul class="herro-contacts__list">
@@ -226,17 +227,17 @@
               <label class="feedback-label" data-lng="feedbackLableName"
                 >Your name
               </label>
-              <input name="name" class="feedback-input" type="text" />
+              <input name="name" class="feedback-input" data-form-name type="text" />
 
               <label class="feedback-label">Email </label>
-              <input name="email" class="feedback-input" type="email" />
+              <input name="email" class="feedback-input" data-form-email type="email" />
 
               <label
                 class="feedback-label js-mask-label__tel"
                 data-lng="feedbackLablePhone"
                 >Your phone
               </label>
-              <input name="phone" class="feedback-input" type="tel" />
+              <input name="phone" class="feedback-input" data-form-tel type="tel" />
 
               <button
                 class="feedback-button__submit"

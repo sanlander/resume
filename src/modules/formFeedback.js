@@ -1,4 +1,5 @@
 import axios from "axios";
+import Inputmask from "inputmask";
 import langData from "./lang/langData.json";
 import { allLang } from "./lang/changeLanguage";
 import { firstLetterToUppercase } from "./utils/firstLetterToUppercase";
@@ -8,9 +9,9 @@ const feedbackBox = document.querySelector(".feedback");
 const closeModalBtn = document.querySelector("[data-modal-close]");
 const modal = document.querySelector("[data-modal]");
 const form = document.querySelector(".form-feedback");
-const inputName = document.querySelector('.feedback-input[type="text"]');
-const inputEmail = document.querySelector('.feedback-input[type="email"]');
-const inputTel = document.querySelector('.feedback-input[type="tel"]');
+const inputName = document.querySelector("[data-form-name]");
+const inputEmail = document.querySelector("[data-form-email]");
+const inputTel = document.querySelector("[data-form-tel]");
 const inputMask = new Inputmask("+38 (999) 999 - 99 - 99");
 inputMask.mask(inputTel);
 
@@ -185,13 +186,14 @@ function createNewInputError(lngTextError, currentElement, hash) {
     const newMsgErr = document.createElement("span");
     newMsgErr.classList.add("msg-error");
 
-    newMsgErr.textContent = langData[lngTextError][hash || "en"];
+    newMsgErr.textContent = langData[lngTextError][hash];
 
     currentElement.classList.add("error");
 
     parentEl.insertAdjacentElement("beforeend", newMsgErr);
   }
 }
+
 // Видаляємо помилку над input в label
 function removeInputError(currentElement) {
   const parentEl = currentElement.previousElementSibling;

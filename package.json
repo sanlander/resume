@@ -7,7 +7,9 @@
     "start": "webpack serve",
     "build-dev": "webpack",
     "build-prod": "webpack --node-env=production",
-    "clear": "rd /s /q dist"
+    "clear": "rd /s /q dist",
+    "lint": "eslint **/*.js",
+    "lint:fix": "eslint --fix **/*.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,12 @@
     "babel-loader": "^9.1.2",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
+    "eslint": "7.19.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "5.2.0",
     "group-css-media-queries-loader": "^4.3.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
@@ -42,6 +50,7 @@
   "dependencies": {
     "axios": "^1.4.0",
     "dotenv-webpack": "^8.0.1",
+    "inputmask": "^5.0.8",
     "nodemailer": "^6.9.3",
     "normalize.css": "^8.0.1"
   }

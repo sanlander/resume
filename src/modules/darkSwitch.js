@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const checkbox = document.querySelectorAll(".dark-switch__label");
 const html = document.querySelector("html");
 
@@ -5,10 +6,10 @@ checkbox.forEach((element) => {
   element.addEventListener("click", onChangeDarkTheme);
 });
 
-function onChangeDarkTheme(e) {
+function onChangeDarkTheme() {
   if (html.classList.contains("dark")) {
     html.classList.remove("dark");
-    localStorage.removeItem("theme");
+    localStorage.setItem("theme", "light");
     return;
   }
 
@@ -17,12 +18,9 @@ function onChangeDarkTheme(e) {
 }
 
 function toChekLocalStorge() {
-  if (localStorage.getItem("theme") === "dark") {
-    html.classList.add("dark");
-    return;
+  if (localStorage.getItem("theme") === "light") {
+    html.classList.remove("dark");
   }
-
-  html.classList.remove("dark");
 }
 
 toChekLocalStorge();

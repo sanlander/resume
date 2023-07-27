@@ -1,5 +1,5 @@
 const title = document.querySelector(".herro-section__title");
-const titleText = document.querySelector(".herro-section__text");
+const titleText = document.querySelector(".herro-section__job");
 const line = document.querySelector(".herro-contacts");
 
 function animText() {

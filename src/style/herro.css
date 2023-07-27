@@ -25,19 +25,18 @@ html.dark .herro-section {
 }
 
 .herro-container {
+  position: relative;
   padding: 24px;
 }
 @media screen and (min-width: 768px) {
   .herro-container {
-    position: relative;
     height: 100%;
   }
 }
 
 .herro-img {
-  margin: 0 auto;
+  margin-left: auto;
   height: 150px;
-  border-radius: 50%;
 }
 @media screen and (min-width: 768px) {
   .herro-img {
@@ -67,6 +66,10 @@ html.dark .herro-section {
 }
 
 .herro-section__title {
+  position: absolute;
+  top: 30px;
+  left: 24px;
+  text-align: left;
   font-family: "Lato Bold";
   font-weight: 700;
   font-size: 22px;
@@ -75,9 +78,11 @@ html.dark .herro-section {
   text-transform: uppercase;
   color: var(--active-text-color);
   margin-top: 5px;
-
-  opacity: 0;
-  transition: opacity 2s ease 0s;
+}
+@media screen and (min-width: 480px) {
+  .herro-section__title {
+    font-size: 29px;
+  }
 }
 @media screen and (min-width: 768px) {
   .herro-section__title {
@@ -88,6 +93,10 @@ html.dark .herro-section {
     font-size: 22px;
     line-height: 1.62;
     letter-spacing: 8px;
+
+    opacity: 0;
+
+    transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -115,21 +124,16 @@ html.dark .herro-section {
   opacity: 1;
 }
 
-.herro-section__text {
+.herro-section__job {
   font-family: "Lato Medium";
   text-transform: uppercase;
   letter-spacing: 10px;
   font-size: 16px;
   line-height: 1.12;
   color: var(--current-text-color);
-  margin-top: 20px;
-
-  opacity: 0;
-  transition: all 2.2s ease 0.7s;
 }
 @media screen and (min-width: 768px) {
-  .herro-section__text {
-    margin-top: 0;
+  .herro-section__job {
     position: absolute;
     width: 500px;
     top: 100px;
@@ -139,10 +143,14 @@ html.dark .herro-section {
     letter-spacing: 14px;
     font-size: 24px;
     line-height: 1.5;
+
+    opacity: 0;
+
+    transition: all 2.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 @media screen and (min-width: 1024px) {
-  .herro-section__text {
+  .herro-section__job {
     letter-spacing: 12px;
     width: auto;
     top: 125px;
@@ -150,32 +158,45 @@ html.dark .herro-section {
   }
 }
 @media screen and (min-width: 1200px) {
-  .herro-section__text {
+  .herro-section__job {
     letter-spacing: 14px;
     top: 140px;
     left: 150px;
   }
 }
 @media screen and (min-width: 1400px) {
-  .herro-section__text {
+  .herro-section__job {
     top: 180px;
   }
 }
-.herro-section__text._active {
+.herro-section__job._active {
   opacity: 1;
 }
-
-.herro-contacts {
-  opacity: 0;
-  transform: translate(0, -130%);
-  transition: all 0.7s ease-out 1.1s;
+.herro-section__job::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: var(--current-text-color);
+  border-radius: 5px;
+  margin-bottom: 14px;
 }
+@media screen and (min-width: 768px) {
+  .herro-section__job::before {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .herro-contacts {
     position: absolute;
     width: 460px;
     top: 290px;
     left: 30px;
+
+    opacity: 0;
+    transform: translate(0, -100%);
+
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -195,7 +216,6 @@ html.dark .herro-section {
 @media screen and (min-width: 1400px) {
   .herro-contacts {
     width: 800px;
-    left: 150px;
   }
 }
 
@@ -240,7 +260,7 @@ html.dark .herro-section {
 .herro-contacts__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 30px;
   margin: 0;
   padding: 0;
   justify-content: space-around;
@@ -248,7 +268,6 @@ html.dark .herro-section {
 @media screen and (min-width: 768px) {
   .herro-contacts__list {
     flex-direction: row;
-    gap: 30px;
   }
 }
 
@@ -257,7 +276,7 @@ html.dark .herro-section {
 }
 .herro-contacts__title {
   color: var(--text-color-black);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   font-size: 18px;
 }
 @media screen and (min-width: 768px) {
