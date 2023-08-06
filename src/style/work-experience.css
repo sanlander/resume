@@ -1,0 +1,109 @@
+.work-experience-section {
+  background-color: var(--bg-color);
+  text-align: center;
+}
+.work-experience-container {
+  padding: 24px;
+}
+@media screen and (min-width: 1024px) {
+  .job-cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .job-card {
+    border: 1px solid var(--active-text-color);
+    border-radius: 8px;
+    padding: 0 12px 20px;
+    width: 45%;
+    background-color: var(--card-color);
+
+    transition: all var(--transition-primary);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .job-card:hover {
+    border-color: transparent;
+    box-shadow: var(--shadow);
+  }
+}
+
+.card-title {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 1.45;
+  text-transform: uppercase;
+  color: var(--text-color-black);
+}
+@media screen and (min-width: 480px) {
+  .card-title {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 77px; */
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-title {
+    min-height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .card-title {
+    font-size: 26px;
+  }
+}
+.job-period {
+  color: var(--current-text-color);
+  font-style: italic;
+  opacity: 0.5;
+}
+.job-list {
+  list-style: none;
+  color: var(--current-text-color);
+  margin-top: 16px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.job-item {
+  font-size: 16px;
+  text-align: justify;
+}
+@media screen and (min-width: 480px) {
+  .job-item {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .job-item {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .job-item {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .job-item {
+    font-size: 22px;
+  }
+}
+.job-item:not(:last-child)::after {
+  content: "\00B7  \00B7  \00B7";
+  display: block;
+  flex-shrink: 0;
+  color: var(--active-text-color);
+  text-align: center;
+}

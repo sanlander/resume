@@ -31,28 +31,40 @@
             <ul class="nav-menu list">
               <li class="nav-menu__item">
                 <a
-                  href="#"
-                  class="nav-menu__link"
+                  href="#home"
+                  class="nav-menu__link current-link"
                   data-lng="linkHome"
                   data-scroll="home"
                   >Home</a
                 >
               </li>
               <li class="nav-menu__item">
-                <a href="#" class="nav-menu__link" data-scroll="integrations"
-                  >Integrations</a
+                <a
+                  href="#about-me"
+                  class="nav-menu__link"
+                  data-lng="linkAboutMe"
+                  data-scroll="about-me"
+                  >About me</a
+                >
+              </li>
+
+              <li class="nav-menu__item">
+                <a
+                  href="#work-experience"
+                  class="nav-menu__link"
+                  data-scroll="work-experience"
+                  data-lng="linkWorkExperience"
+                  >Work experience</a
                 >
               </li>
               <li class="nav-menu__item">
-                <a href="#" class="nav-menu__link">Pricing</a>
-              </li>
-              <li class="nav-menu__item">
-                <a href="#" class="nav-menu__link" data-scroll="company"
-                  >Company</a
+                <a
+                  href="#education"
+                  class="nav-menu__link"
+                  data-scroll="education"
+                  data-lng="linkEducation"
+                  >Education</a
                 >
-              </li>
-              <li class="nav-menu__item">
-                <a href="#" class="nav-menu__link">Blog</a>
               </li>
             </ul>
 
@@ -94,16 +106,27 @@
                     <a
                       class="mob-menu-nav__link"
                       href="#"
-                      data-scroll="integrations"
-                      >Integrations</a
+                      data-lng="linkAboutMeMob"
+                      data-scroll="about-me"
+                      >About me</a
                     >
                   </li>
                   <li class="mob-menu-nav__item">
-                    <a class="mob-menu-nav__link" href="#">Pricing</a>
+                    <a
+                      class="mob-menu-nav__link"
+                      href="#"
+                      data-scroll="work-experience"
+                      data-lng="linkWorkExperienceMob"
+                      >Work experience</a
+                    >
                   </li>
                   <li class="mob-menu-nav__item">
-                    <a class="mob-menu-nav__link" href="#" data-scroll="company"
-                      >Company</a
+                    <a
+                      class="mob-menu-nav__link"
+                      href="#"
+                      data-scroll="education"
+                      data-lng="linkEducationMob"
+                      >Education</a
                     >
                   </li>
                 </ul>
@@ -227,17 +250,32 @@
               <label class="feedback-label" data-lng="feedbackLableName"
                 >Your name
               </label>
-              <input name="name" class="feedback-input" data-form-name type="text" />
+              <input
+                name="name"
+                class="feedback-input"
+                data-form-name
+                type="text"
+              />
 
-              <label class="feedback-label">Email </label>
-              <input name="email" class="feedback-input" data-form-email type="email" />
+              <label class="feedback-label">Email *</label>
+              <input
+                name="email"
+                class="feedback-input"
+                data-form-email
+                type="email"
+              />
 
               <label
                 class="feedback-label js-mask-label__tel"
                 data-lng="feedbackLablePhone"
                 >Your phone
               </label>
-              <input name="phone" class="feedback-input" data-form-tel type="tel" />
+              <input
+                name="phone"
+                class="feedback-input"
+                data-form-tel
+                type="tel"
+              />
 
               <button
                 class="feedback-button__submit"
@@ -263,13 +301,181 @@
         </div>
         <!----------- Form Feedback (end) ----------->
       </section>
-      <!------------- Advantages Section ------------->
-      <section class="section advantages-section" id="integrations">
-        <div class="container">Integrations Section</div>
+
+      <!------------- About Me Section ------------->
+      <section class="section about-me-section" id="about-me">
+        <div class="container about-me-container">
+          <h2 class="section-title" data-lng="aboutMeTitle">About me</h2>
+
+          <ul class="about-me__list" data-lng="aboutMeList">
+            <li class="about-me__item">
+              Determined and productive developer with a passion for creative
+              solutions.
+            </li>
+            <li class="about-me__item">
+              Knowledgeable in developing sites, user interface, testing and
+              debugging processes.
+            </li>
+            <li class="about-me__item">
+              Сompetent in JavaScript, Node.js, React, HTML, CSS
+            </li>
+            <li class="about-me__item">
+              Personally designed a sales automation system for retail stores
+              and an online store that works to this day.
+            </li>
+            <li class="about-me__item">I like to communicate with people.</li>
+            <li class="about-me__item">
+              I am looking for a job where there are no identical tasks.
+            </li>
+            <li class="about-me__item">
+              I believe that work should not be a means of livelihood, work
+              should be liked and bring useful solutions to others, then there
+              will be a result for everyone.
+            </li>
+          </ul>
+        </div>
       </section>
-      <!------------- Benefits section ------------->
-      <section class="section benefits-section" id="company">
-        <div class="container">Company section</div>
+      <!------------- Work Experience section ------------->
+      <section class="section work-experience-section" id="work-experience">
+        <div class="container work-experience-container">
+          <h2 class="section-title" data-lng="workExperienceTitle">
+            Work Experience
+          </h2>
+          <div class="job-cards">
+            <div class="job-card">
+              <h3 class="card-title" data-lng="jobTitlePB">
+                Head of the Cherkas'ka oblast Credit cards department in
+                PrivatBank
+              </h3>
+              <div class="job-period">/ 2005 - 2021 /</div>
+              <hr />
+
+              <ul class="job-list" data-lng="jobListPB">
+                <li class="job-item">
+                  Organization of the work process of more than 140 employees
+                </li>
+                <li class="job-item">
+                  Software complexes - training to work in them, collection of
+                  problematic leads and recommendations, their consolidation and
+                  transfer of recommendations to developers for their
+                  improvement
+                </li>
+                <li class="job-item">
+                  Preparation of statistical data and activity reports of the
+                  Cherkasy oblast branch
+                </li>
+                <li class="job-item">Conducting trainings for employees</li>
+                <li class="job-item">
+                  Conducting presentations for potential clients
+                </li>
+                <li class="job-item">
+                  General planning and monitoring of branch tasks
+                </li>
+                <li class="job-item">Recruitment and dismissal of employees</li>
+                <li class="job-item">
+                  Work as a crisis manager in areas that are lagging behind in
+                  terms of deadlines
+                </li>
+              </ul>
+            </div>
+            <div class="job-card">
+              <h3 class="card-title" data-lng="jobTitleFOP">
+                Private entrepreneur
+              </h3>
+              <div class="job-period">/ 2015 - 2023 /</div>
+              <hr />
+
+              <ul class="job-list" data-lng="jobListFOP">
+                <li class="job-item">Internet trading</li>
+                <li class="job-item">Retail stores in Cherkasy</li>
+                <li class="job-item">Production of own goods</li>
+                <li class="job-item">
+                  Development of our own CRM sales automation system to control
+                  cash transactions, reporting, accounting, consolidation of
+                  balances and other operations
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------- Education section ------------->
+      <section class="section education-section" id="education">
+        <div class="container education-container">
+          <h2 class="section-title" data-lng="educationTitle">Education</h2>
+          <div class="education-cards">
+            <div class="educatiom-card">
+              <h3 class="card-title" data-lng="educationTitleCSTU">
+                Cherkasy State Technological University
+              </h3>
+              <hr />
+              <div class="educatiom-period">
+                <span>2001</span>
+                <svg class="education-icon">
+                  <use href="./img/sprites.svg#icon-education"></use>
+                </svg>
+                <span>2006</span>
+              </div>
+              <p class="education-course" data-lng="educationCourseCSTU">
+                Economics and management, master's degree with honors
+              </p>
+            </div>
+
+            <div class="educatiom-card">
+              <h3 class="card-title" data-lng="educationTitleGOIT">
+                IT School GoIT, Kyiv
+              </h3>
+              <hr />
+              <div class="educatiom-period">
+                <span>2022</span>
+                <svg class="education-icon">
+                  <use href="./img/sprites.svg#icon-education"></use>
+                </svg>
+                <span>2023</span>
+              </div>
+              <p class="education-course">
+                Fullstack developer
+                <a
+                  href="./files/Certificate.pdf"
+                  target="_blank"
+                  data-lng="certificate"
+                  >(certificate)</a
+                >
+              </p>
+            </div>
+
+            <div class="educatiom-card">
+              <h3 class="card-title" data-lng="educationTitleGEEK">
+                IT School GeekHub, Cherkassy
+              </h3>
+              <hr />
+              <div class="educatiom-period">
+                <span>2022</span>
+                <svg class="education-icon">
+                  <use href="./img/sprites.svg#icon-education"></use>
+                </svg>
+                <span>2023</span>
+              </div>
+              <p class="education-course">GeekHub JS (seasons 12)</p>
+            </div>
+
+            <div class="educatiom-card">
+              <h3 class="card-title" data-lng="educationTitleENGLISH">
+                SVITMOV.ck, Cherkassy
+              </h3>
+              <hr />
+              <div class="educatiom-period">
+                <span>2023</span>
+                <svg class="education-icon">
+                  <use href="./img/sprites.svg#icon-education"></use>
+                </svg>
+                <span>Present</span>
+              </div>
+              <p class="education-course">Cambridge English</p>
+            </div>
+          </div>
+        </div>
       </section>
       <!------------- Button page up ------------->
       <button type="button" class="page-up visually-hidden">

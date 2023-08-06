@@ -1,11 +1,17 @@
+const screenWidth = document.documentElement.clientWidth;
+
 const refs = {
   body: document.querySelector("body"),
   pageUpBtn: document.querySelector(".page-up"),
-  navMenuLink: document.querySelectorAll(".nav-menu, .mob-menu-nav"),
+  navMenuLink:
+    screenWidth >= 768
+      ? document.querySelectorAll(".nav-menu__link")
+      : document.querySelectorAll(".mob-menu-nav__link"),
 };
 
 // -------- EventListeners --------
 refs.pageUpBtn.addEventListener("click", onPageUp);
+
 refs.navMenuLink.forEach((el) => {
   el.addEventListener("click", scrollToElement);
 });
@@ -33,13 +39,55 @@ function scrollToElement(e) {
 
   if (!idTag) return;
 
-  const tag = document.querySelector(`#${idTag}`);
+  if (screenWidth >= 768) {
+    refs.navMenuLink.forEach((el) => {
+      el.classList.remove("current-link");
+    });
 
-  const screenWidth = document.documentElement.clientWidth;
+    e.target.classList.add("current-link");
+  }
+
+  const tag = document.querySelector(`#${idTag}`);
 
   const yOffset = screenWidth >= 768 ? -80 : -60;
 
   const y = tag.getBoundingClientRect().top + window.scrollY + yOffset;
 
   window.scrollTo({ top: y, behavior: "smooth" });
+}
+
+// ******** Intersection Observer API *************** //
+
+if (screenWidth >= 768) {
+  const changeNav = (entries) => {
+    const entry = entries.reduce((activeEntry, entry) => {
+      if (activeEntry.intersectionRatio < entry.intersectionRatio) {
+        activeEntry = entry;
+      }
+
+      return activeEntry;
+    });
+
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+      document.querySelector(".current-link").classList.remove("current-link");
+
+      const id = entry.target.getAttribute("id");
+
+      document.querySelector(`[href="#${id}"]`).classList.add("current-link");
+    }
+  };
+
+  // threshold -> відстоток видимої частини (0 - від 1px, 1 - 100%)
+  const options = {
+    threshold: [0.55, 1],
+  };
+
+  // eslint-disable-next-line no-undef
+  const observerSections = new IntersectionObserver(changeNav, options);
+
+  // передаєм всі секції в обсервер
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    observerSections.observe(section);
+  });
 }
