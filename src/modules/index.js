@@ -5,3 +5,4 @@ import "./lang/changeLanguage";
 import "./darkSwitch";
 import "./formFeedback";
 import "./mobile-menu";
+import "./getYear";

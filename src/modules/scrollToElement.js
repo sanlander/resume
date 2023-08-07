@@ -5,8 +5,8 @@ const refs = {
   pageUpBtn: document.querySelector(".page-up"),
   navMenuLink:
     screenWidth >= 768
-      ? document.querySelectorAll(".nav-menu__link")
-      : document.querySelectorAll(".mob-menu-nav__link"),
+      ? document.querySelectorAll(".nav-menu__link, .footer-nav__scroll")
+      : document.querySelectorAll(".mob-menu-nav__link, .footer-nav__scroll"),
 };
 
 // -------- EventListeners --------

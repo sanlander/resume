@@ -100,6 +100,11 @@
     font-size: 22px;
   }
 }
+.job-item a {
+  text-decoration: none;
+  color: #81b0d8;
+}
+
 .job-item:not(:last-child)::after {
   content: "\00B7  \00B7  \00B7";
   display: block;

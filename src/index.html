@@ -204,6 +204,7 @@
                   <a
                     href="https://goo.gl/maps/mxJCtHM7kM54ssGA6"
                     target="_blank"
+                    data-lng="locationСity"
                     >Cherkasy, Ukraine</a
                   >
                 </p>
@@ -223,9 +224,9 @@
                 </p>
               </li>
               <li class="herro-contacts__item">
-                <h3 class="herro-contacts__title">Linkedin</h3>
+                <h3 class="herro-contacts__title">Telegram</h3>
                 <p class="herro-contacts__info">
-                  <a href="#linkedin">#linkedin</a>
+                  <a href="https://t.me/gorrec" target="_blank">#gorrec</a>
                 </p>
               </li>
             </ul>
@@ -390,6 +391,27 @@
                 <li class="job-item">Retail stores in Cherkasy</li>
                 <li class="job-item">Production of own goods</li>
                 <li class="job-item">
+                  Developed online shops based on CMS (<a
+                    href="https://stagro.trade"
+                    target="_blank"
+                    >Stagro.trade</a
+                  >,
+                  <a href="https://eurofoods.com.ua" target="_blank"
+                    >Eurofoods.com.ua</a
+                  >,
+                  <a href="https://feell.com.ua" target="_blank">Feell.com.ua</a
+                  >,
+                  <a href="https://garantbud2020.com.ua" target="_blank"
+                    >Garantbud2020.com.ua</a
+                  >,
+                  <a href="https://kamuflazh-ukraine.com.ua" target="_blank"
+                    >Kamuflazh-ukraine.com.ua</a
+                  >,
+                  <a href="https://ymmebli.in.ua" target="_blank"
+                    >Ymmebli.in.ua</a
+                  >)
+                </li>
+                <li class="job-item">
                   Development of our own CRM sales automation system to control
                   cash transactions, reporting, accounting, consolidation of
                   balances and other operations
@@ -470,7 +492,7 @@
                 <svg class="education-icon">
                   <use href="./img/sprites.svg#icon-education"></use>
                 </svg>
-                <span>Present</span>
+                <span data-lng="present" ="">Present</span>
               </div>
               <p class="education-course">Cambridge English</p>
             </div>
@@ -485,8 +507,115 @@
       </button>
     </main>
 
-    <footer>
-      <div class="footer">footer</div>
+    <!------------- Footer ------------->
+    <footer class="section footer-section">
+      <div class="container footer-container">
+        <div class="footer-nav">
+          <h3 class="footer-nav__title" data-lng="footerMenu">Menu</h3>
+          <hr />
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a
+                href="#home"
+                class="footer-nav__link footer-nav__scroll"
+                data-lng="linkHomeFooter"
+                data-scroll="home"
+                >Home</a
+              >
+            </li>
+            <li class="footer-nav__item">
+              <a
+                href="#about-me"
+                class="footer-nav__link footer-nav__scroll"
+                data-lng="linkAboutMeFooter"
+                data-scroll="about-me"
+                >About me</a
+              >
+            </li>
+
+            <li class="footer-nav__item">
+              <a
+                href="#work-experience"
+                class="footer-nav__link footer-nav__scroll"
+                data-scroll="work-experience"
+                data-lng="linkWorkExperienceFooter"
+                >Work experience</a
+              >
+            </li>
+            <li class="footer-nav__item">
+              <a
+                href="#education"
+                class="footer-nav__link footer-nav__scroll"
+                data-scroll="education"
+                data-lng="linkEducationFooter"
+                >Education</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-nav">
+          <h3 class="footer-nav__title" data-lng="footerContacts">Contacts</h3>
+          <hr />
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item">
+              <a
+                href="https://goo.gl/maps/mxJCtHM7kM54ssGA6"
+                target="_blank"
+                class="footer-nav__link"
+                data-lng="locationСityFooter"
+              >
+                <svg>
+                  <use href="./img/sprites.svg#icon-location"></use>
+                </svg>
+                Cherkasy, Ukraine</a
+              >
+            </li>
+            <li class="footer-nav__item">
+              <a href="tel:+380674552288" class="footer-nav__link">
+                <svg>
+                  <use href="./img/sprites.svg#icon-mobile"></use>
+                </svg>
+                067 455 22 88</a
+              >
+            </li>
+            <li class="footer-nav__item">
+              <a href="tel:+380738782288" class="footer-nav__link">
+                <svg>
+                  <use href="./img/sprites.svg#icon-mobile"></use>
+                </svg>
+                073 878 22 88
+              </a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="mailto:s.gorshkoder@gmail.com" class="footer-nav__link">
+                <svg>
+                  <use href="./img/sprites.svg#icon-envelop"></use>
+                </svg>
+                s.gorshkoder@gmail.com</a
+              >
+            </li>
+            <li class="footer-nav__item">
+              <a
+                href="https://t.me/gorrec"
+                target="_blank"
+                class="footer-nav__link"
+              >
+                <svg>
+                  <use href="./img/sprites.svg#icon-telegram"></use>
+                </svg>
+                t.me/gorrec</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &#169; <span class="year"></span>&#32;
+          <span data-lng="rights">All rights reserved</span>
+        </p>
+      </div>
     </footer>
   </body>
 </html>

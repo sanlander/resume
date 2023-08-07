@@ -15,11 +15,23 @@
     "en": "Location",
     "ua": "Місцезнаходження"
   },
+  "locationСity": {
+    "en": "Cherkasy, Ukraine",
+    "ua": "м.Черкаси, Україна"
+  },
+  "locationСityFooter": {
+    "en": "<svg><use href=\"assets/sprites.svg#icon-location\"></use></svg>Cherkasy, Ukraine",
+    "ua": "<svg><use href=\"assets/sprites.svg#icon-location\"></use></svg>м.Черкаси, Україна"
+  },
   "linkHome": {
     "en": "Home",
     "ua": "Головна"
   },
   "linkHomeMob": {
+    "en": "Home",
+    "ua": "Головна"
+  },
+  "linkHomeFooter": {
     "en": "Home",
     "ua": "Головна"
   },
@@ -31,11 +43,19 @@
     "en": "About me",
     "ua": "Про мене"
   },
+  "linkAboutMeFooter": {
+    "en": "About me",
+    "ua": "Про мене"
+  },
   "linkWorkExperience": {
     "en": "Work Experience",
     "ua": "Досвід роботи"
   },
   "linkWorkExperienceMob": {
+    "en": "Work Experience",
+    "ua": "Досвід роботи"
+  },
+  "linkWorkExperienceFooter": {
     "en": "Work Experience",
     "ua": "Досвід роботи"
   },
@@ -98,8 +118,8 @@
     "ua": "Приватний підприємець"
   },
   "jobListFOP": {
-    "en": "<li class=\"job-item\">Internet trading</li><li class=\"job-item\">Retail stores in Cherkasy</li><li class=\"job-item\">Production of own goods</li><li class=\"job-item\">Development of our own CRM sales automation system to control cash transactions, reporting, accounting, consolidation of balances and other operations</li>",
-    "ua": "<li class=\"job-item\">Власний Інтернет-магазин</li><li class=\"job-item\">Роздрібні магазини в м.Черкаси</li><li class=\"job-item\">Виробництво власних товарів/продуктів</li><li class=\"job-item\">Розробка всласної CRM системи автоматизації продаж для контролю касових операцій, звітності, обліку, консолідації залишків та інших операцій</li>"
+    "en": "<li class=\"job-item\">Internet trading</li><li class=\"job-item\">Retail stores in Cherkasy</li><li class=\"job-item\">Production of own goods</li><li class=\"job-item\">Developed online shops based on CMS (<a href=\"https://stagro.trade\" target=\"_blank\">Stagro.trade</a>, <a href=\"https://eurofoods.com.ua\" target=\"_blank\">Eurofoods.com.ua</a>, <a href=\"https://feell.com.ua\" target=\"_blank\">Feell.com.ua</a>, <a href=\"https://garantbud2020.com.ua\" target=\"_blank\">Garantbud2020.com.ua</a>, <a href=\"https://kamuflazh-ukraine.com.ua\" target=\"_blank\">Kamuflazh-ukraine.com.ua</a>, <a href=\"https://ymmebli.in.ua\" target=\"_blank\">Ymmebli.in.ua</a>)</li><li class=\"job-item\">Development of our own CRM sales automation system to control cash transactions, reporting, accounting, consolidation of balances and other operations</li>",
+    "ua": "<li class=\"job-item\">Власний Інтернет-магазин</li><li class=\"job-item\">Роздрібні магазини в м.Черкаси</li><li class=\"job-item\">Виробництво власних товарів/продуктів</li><li class=\"job-item\">Створення Інтернет-магазинів на базі різних CMS (<a href=\"https://stagro.trade\" target=\"_blank\">Stagro.trade</a>, <a href=\"https://eurofoods.com.ua\" target=\"_blank\">Eurofoods.com.ua</a>, <a href=\"https://feell.com.ua\" target=\"_blank\">Feell.com.ua</a>, <a href=\"https://garantbud2020.com.ua\" target=\"_blank\">Garantbud2020.com.ua</a>, <a href=\"https://kamuflazh-ukraine.com.ua\" target=\"_blank\">Kamuflazh-ukraine.com.ua</a>, <a href=\"https://ymmebli.in.ua\" target=\"_blank\">Ymmebli.in.ua</a>)</li><li class=\"job-item\">Розробка всласної CRM системи автоматизації продаж для контролю касових операцій, звітності, обліку, консолідації залишків та інших операцій</li>"
   },
   "educationTitle": {
     "en": "Education",
@@ -128,5 +148,21 @@
   "educationTitleENGLISH": {
     "en": "SVITMOV.ck, Cherkassy",
     "ua": "SVITMOV.ck, м.Черкаси"
+  },
+  "present": {
+    "en": "Present",
+    "ua": "Сьогодні"
+  },
+  "footerMenu": {
+    "en": "Menu",
+    "ua": "Меню"
+  },
+  "footerContacts": {
+    "en": "Contacts",
+    "ua": "Контакти"
+  },
+  "rights": {
+    "en": "All rights reserved",
+    "ua": " Всі права захищені"
   }
 }
