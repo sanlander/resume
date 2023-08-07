@@ -67,6 +67,10 @@
     "en": "Education",
     "ua": "Освіта"
   },
+  "linkEducationFooter": {
+    "en": "Education",
+    "ua": "Освіта"
+  },
   "feedbackMsgErrorTel": {
     "en": "Enter all number (min 10)",
     "ua": "Введіть номер повнісьтю (мін 10)"

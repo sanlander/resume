@@ -2,6 +2,7 @@ const screenWidth = document.documentElement.clientWidth;
 
 const refs = {
   body: document.querySelector("body"),
+  logo: document.querySelector(".header-logo"),
   pageUpBtn: document.querySelector(".page-up"),
   navMenuLink:
     screenWidth >= 768
@@ -10,6 +11,8 @@ const refs = {
 };
 
 // -------- EventListeners --------
+refs.logo.addEventListener("click", onPageUp);
+
 refs.pageUpBtn.addEventListener("click", onPageUp);
 
 refs.navMenuLink.forEach((el) => {
@@ -28,7 +31,9 @@ function userScroll() {
   }
 }
 
-function onPageUp() {
+function onPageUp(e) {
+  e.preventDefault();
+  
   refs.body.scrollIntoView({ behavior: "smooth" });
 }
 

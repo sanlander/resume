@@ -35,6 +35,9 @@
   font-weight: 700;
   color: var(--current-text-color);
 }
+.header-logo.current-link {
+  color: var(--current-text-color);
+}
 .header-logo span {
   color: var(--active-text-color);
 }
