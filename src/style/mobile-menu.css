@@ -76,14 +76,15 @@
   text-decoration: none;
   color: var(--primary-color-white);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 22px;
   line-height: 1.29;
   width: 100%;
+  text-transform: uppercase;
 }
 
 .mob-menu-nav__item {
   display: flex;
-  padding: 11px 40px;
+  padding: 12px 40px;
   border-bottom: 1px solid #ffffff;
   align-items: center;
 }

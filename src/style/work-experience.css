@@ -12,11 +12,15 @@
     margin-top: 24px;
   }
 }
+
+.job-card {
+  margin-top: 24px;
+}
 @media screen and (min-width: 1024px) {
   .job-card {
     border: 1px solid var(--active-text-color);
     border-radius: 8px;
-    padding: 0 12px 20px;
+    padding: 12px;
     width: 45%;
     background-color: var(--card-color);
 
@@ -31,7 +35,6 @@
 }
 
 .card-title {
-  margin-top: 20px;
   font-size: 20px;
   line-height: 1.45;
   text-transform: uppercase;
@@ -47,7 +50,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* min-height: 77px; */
   }
 }
 @media screen and (min-width: 1024px) {

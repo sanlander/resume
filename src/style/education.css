@@ -5,9 +5,12 @@
 .education-container {
   padding: 24px;
 }
+
+.education-cards {
+  margin-top: 24px;
+}
 @media screen and (min-width: 768px) {
   .education-cards {
-    margin-top: 16px;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -15,27 +18,38 @@
   }
 }
 
-.educatiom-card {
+.education-card {
   width: 100%;
   margin-top: 12px;
   border: 1px solid var(--active-text-color);
   border-radius: 8px;
-  padding: 0 12px 20px;
+  padding: 12px;
   background-color: var(--card-color);
 
   transition: all var(--transition-primary);
 }
 
 @media screen and (min-width: 768px) {
-  .educatiom-card {
+  .education-card {
     width: calc(100% / 2 - 50px);
   }
 
-  .educatiom-card:hover {
+  .education-card:hover {
     border-color: transparent;
     box-shadow: var(--shadow);
   }
 }
+@media screen and (min-width: 768px) {
+  .education-card .card-title {
+    min-height: 96px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .education-card .card-title {
+    min-height: 70px;
+  }
+}
+
 .education-icon {
   margin-top: 12px;
   height: 70px;
