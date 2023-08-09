@@ -1,0 +1,121 @@
+.chat-online {
+  position: fixed;
+  width: 50px;
+  right: 25px;
+  bottom: 25px;
+}
+
+.chat-online:hover .chat-online-buttons {
+  opacity: 1;
+  visibility: visible;
+}
+
+.chat-online:hover .chat-online-buttons__link {
+  transform: scaleY(1) scaleX(1) translateY(-16px) translateX(0px);
+}
+
+.chat-online-button:hover
+  + .chat-online-buttons
+  .chat-online-buttons__link:before {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: right center 0;
+  transition-delay: 0.3s;
+}
+
+.chat-online-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.chat-online-buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+.chat-online__main-icon {
+  fill: var(--active-text-color);
+
+  animation: pulsing 2s infinite;
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+  }
+}
+
+.chat-online-buttons__item {
+  display: block;
+  text-align: center;
+  margin: 12px 0;
+}
+
+.chat-online-buttons__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+
+  transition: 0.3s;
+}
+
+[data-tooltip]:before {
+  top: 50%;
+  margin-top: -11px;
+  font-weight: 600;
+  border-radius: 2px;
+  background: #585858;
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 12px;
+  text-decoration: none;
+  visibility: hidden;
+  opacity: 0;
+  padding: 4px 7px;
+  margin-right: 12px;
+  position: absolute;
+  transform: scale(0);
+  right: 100%;
+  white-space: nowrap;
+  transform-origin: top right;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+[data-tooltip]:hover:before {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: right center 0;
+}
+
+.chat-online__icon {
+  width: 80%;
+  height: 80%;
+}
