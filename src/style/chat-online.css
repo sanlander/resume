@@ -94,7 +94,7 @@
   background: #585858;
   color: #fff;
   content: attr(data-tooltip);
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   visibility: hidden;
   opacity: 0;
