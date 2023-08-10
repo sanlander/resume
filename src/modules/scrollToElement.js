@@ -33,7 +33,7 @@ function userScroll() {
 
 function onPageUp(e) {
   e.preventDefault();
-  
+
   refs.body.scrollIntoView({ behavior: "smooth" });
 }
 
@@ -62,37 +62,119 @@ function scrollToElement(e) {
 }
 
 // ******** Intersection Observer API *************** //
+document.addEventListener("DOMContentLoaded", (event) => {
+  if (screenWidth >= 768) {
+    // Intersection Observer for NAV Menu
+    const changeNav = (entries) => {
+      const entry = entries.reduce((activeEntry, entry) => {
+        if (activeEntry.intersectionRatio < entry.intersectionRatio) {
+          activeEntry = entry;
+        }
 
-if (screenWidth >= 768) {
-  const changeNav = (entries) => {
-    const entry = entries.reduce((activeEntry, entry) => {
-      if (activeEntry.intersectionRatio < entry.intersectionRatio) {
-        activeEntry = entry;
+        return activeEntry;
+      });
+
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+        document
+          .querySelector(".current-link")
+          .classList.remove("current-link");
+
+        const id = entry.target.getAttribute("id");
+
+        document.querySelector(`[href="#${id}"]`).classList.add("current-link");
       }
+    };
 
-      return activeEntry;
+    // threshold -> відстоток видимої частини (0 - від 1px, 1 - 100%)
+    const optionsNavMenu = {
+      threshold: [0.55, 1],
+    };
+
+    // eslint-disable-next-line no-undef
+    const observerSections = new IntersectionObserver(
+      changeNav,
+      optionsNavMenu
+    );
+
+    // передаєм всі секції в обсервер
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+      observerSections.observe(section);
     });
+  }
 
-    if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
-      document.querySelector(".current-link").classList.remove("current-link");
-
-      const id = entry.target.getAttribute("id");
-
-      document.querySelector(`[href="#${id}"]`).classList.add("current-link");
-    }
+  // Intersection Observer for section "about-me"
+  const changeItems = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.4) {
+        entry.target.classList.add("_active");
+        observerItemsAboutMe.unobserve(entry.target);
+      }
+    });
   };
 
-  // threshold -> відстоток видимої частини (0 - від 1px, 1 - 100%)
-  const options = {
-    threshold: [0.55, 1],
+  const optionsAboutMe = {
+    threshold: 0.4,
   };
 
   // eslint-disable-next-line no-undef
-  const observerSections = new IntersectionObserver(changeNav, options);
+  const observerItemsAboutMe = new IntersectionObserver(
+    changeItems,
+    optionsAboutMe
+  );
 
-  // передаєм всі секції в обсервер
-  const sections = document.querySelectorAll("section");
-  sections.forEach((section) => {
-    observerSections.observe(section);
+  const items = document.querySelectorAll(".about-me__item");
+  items.forEach((item) => {
+    observerItemsAboutMe.observe(item);
   });
-}
+
+  // Intersection Observer for section "work-experience"
+  const changeJobCards = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+        entry.target.classList.add("_active");
+        observerItemsAboutMe.unobserve(entry.target);
+      }
+    });
+  };
+
+  const optionsJobCards = {
+    threshold: 0.3,
+  };
+
+  // eslint-disable-next-line no-undef
+  const observerJobCards = new IntersectionObserver(
+    changeJobCards,
+    optionsJobCards
+  );
+
+  const jobCards = document.querySelectorAll(".job-card");
+  jobCards.forEach((card) => {
+    observerJobCards.observe(card);
+  });
+
+  // Intersection Observer for section "education"
+  const changeEducationCards = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+        entry.target.classList.add("_active");
+        observerItemsAboutMe.unobserve(entry.target);
+      }
+    });
+  };
+
+  const optionsEducationCards = {
+    threshold: 0.3,
+  };
+
+  // eslint-disable-next-line no-undef
+  const observerEducationCards = new IntersectionObserver(
+    changeEducationCards,
+    optionsEducationCards
+  );
+
+  const educationCards = document.querySelectorAll(".education-card");
+  educationCards.forEach((edCard) => {
+    observerEducationCards.observe(edCard);
+  });
+});

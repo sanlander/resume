@@ -12,12 +12,16 @@
   },
   "btnContact": { "en": "Contact with me", "ua": "Зв'язатись зі мною" },
   "location": {
-    "en": "Location",
-    "ua": "Місцезнаходження"
+    "en": "<svg><use href=\"assets/sprites.svg#icon-location\"></use></svg>Location",
+    "ua": "<svg><use href=\"assets/sprites.svg#icon-location\"></use></svg>Місцезнаходження"
   },
   "locationСity": {
     "en": "Cherkasy, Ukraine",
     "ua": "м.Черкаси, Україна"
+  },
+  "contactsPhone": {
+    "en": "<svg><use href=\"assets/sprites.svg#icon-mobile\"></use></svg>Phone",
+    "ua": "<svg><use href=\"assets/sprites.svg#icon-mobile\"></use></svg>Телефон"
   },
   "locationСityFooter": {
     "en": "<svg><use href=\"assets/sprites.svg#icon-location\"></use></svg>Cherkasy, Ukraine",

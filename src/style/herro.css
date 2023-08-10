@@ -194,7 +194,7 @@
     opacity: 0;
     transform: translate(0, -100%);
 
-    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -273,12 +273,17 @@
   list-style: none;
 }
 .herro-contacts__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: var(--text-color-black);
   margin-bottom: 8px;
   font-size: 18px;
 }
 @media screen and (min-width: 768px) {
   .herro-contacts__title {
+    flex-direction: column;
     margin-bottom: 12px;
     font-size: 16px;
   }
@@ -286,6 +291,24 @@
 @media screen and (min-width: 1024px) {
   .herro-contacts__title {
     font-size: 18px;
+  }
+}
+.herro-contacts__title svg {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  fill: var(--current-text-color);
+}
+@media screen and (min-width: 768px) {
+  .herro-contacts__title svg {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .herro-contacts__title svg {
+    width: 20px;
+    height: 20px;
   }
 }
 

@@ -9,7 +9,7 @@
   .job-cards {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 24px;
+    margin-top: 34px;
   }
 }
 
@@ -32,6 +32,14 @@
     border-color: transparent;
     box-shadow: var(--shadow);
   }
+}
+.job-card hr {
+  width: 0;
+
+  transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+.job-card._active hr {
+  width: 90%;
 }
 
 .card-title {

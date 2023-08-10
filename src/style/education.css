@@ -25,8 +25,7 @@
   border-radius: 8px;
   padding: 12px;
   background-color: var(--card-color);
-
-  transition: all var(--transition-primary);
+  transform: scale(0.4);
 }
 
 @media screen and (min-width: 768px) {
@@ -47,6 +46,19 @@
 @media screen and (min-width: 1024px) {
   .education-card .card-title {
     min-height: 70px;
+  }
+}
+.education-card._active {
+  animation: scale-up-center 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
