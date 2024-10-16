@@ -10,7 +10,7 @@
     "en": "Gorshkoder Oleksandr",
     "ua": "Горшкодер Олександр"
   },
-  "btnContact": { "en": "Contact with me", "ua": "Зв'язатись зі мною" },
+  "btnContact": { "en": "Contact me", "ua": "Зв'язатись зі мною" },
   "location": {
     "en": "<svg><use href=\"assets/sprites.svg#icon-location\"></use></svg>Location",
     "ua": "<svg><use href=\"assets/sprites.svg#icon-location\"></use></svg>Місцезнаходження"
@@ -106,28 +106,36 @@
     "ua": "Про мене"
   },
   "aboutMeList": {
-    "en": "<li class=\"about-me__item\">Determined and productive developer with a passion for creative solutions. </li><li class=\"about-me__item\">Knowledgeable in developing sites, user interface, testing and debugging processes.</li><li class=\"about-me__item\">Сompetent in JavaScript, Node.js, React, HTML, CSS.</li><li class=\"about-me__item\">Personally designed a sales automation system for retail stores and an online store that works to this day.</li><li class=\"about-me__item\">I like to communicate with people.</li><li class=\"about-me__item\">I am looking for a job where there are no identical tasks.</li><li class=\"about-me__item\">I believe that work should not be a means of livelihood, work should be liked and bring useful solutions to others, then there will be a result for everyone.</li>",
-    "ua": "<li class=\"about-me__item\">Рішучий і продуктивний розробник із пристрастю до творчих рішень.</li><li class=\"about-me__item\">Обізнаний у розробці сайтів, інтерфейсу користувача, тестуванні та налагодженні процесів.</li><li class=\"about-me__item\">Володію JavaScript, Node.js, React, HTML, CSS.</li><li class=\"about-me__item\">Особисто спроектував систему автоматизації продаж для магазинів роздрібної торгівлі та онлайн магазину, яка працює до цього дня.</li><li class=\"about-me__item\">Люблю спілкуватись з людьми.</li><li class=\"about-me__item\">Шукаю роботу, де немає однакових завдань.</li><li class=\"about-me__item\">Я вірю - робота не має бути засобом існування, робота має подобатись та приносити корисні рішення іншим, тоді буде результат для всіх.</li>"
+    "en": "<li class=\"about-me__item\">Determined and productive developer with a passion for creative solutions. </li><li class=\"about-me__item\">Knowledgeable in developing sites, user interface, testing and debugging processes.</li><li class=\"about-me__item\">Сompetent in React, Redux Toolkit, JavaScript, Node.js, Express.js, REST API, MongoDB, MySQL, Firebase, Ant Design, HTML, CSS (Sass).</li><li class=\"about-me__item\">Personally designed a sales automation system for retail stores and an online store that works to this day.</li><li class=\"about-me__item\">Enjoy communication with people.</li><li class=\"about-me__item\">I am looking for a job where I would be able to solve various tasks and apply my skill of thinking outside the box.</li><li class=\"about-me__item\">I believe that work should not be a mean of livelihood, work should be enjoyable and benefit the society and then there will be a result for everyone..</li>",
+    "ua": "<li class=\"about-me__item\">Рішучий і продуктивний розробник із пристрастю до творчих рішень.</li><li class=\"about-me__item\">Обізнаний у розробці сайтів, інтерфейсу користувача, тестуванні та налагодженні процесів.</li><li class=\"about-me__item\">Володію React, Redux Toolkit, JavaScript, Node.js, Express.js, REST API, MongoDB, Firebase, MySQL, Ant Design, HTML, CSS (Sass).</li><li class=\"about-me__item\">Особисто спроектував систему автоматизації продаж для магазинів роздрібної торгівлі та онлайн магазину, яка працює до цього дня.</li><li class=\"about-me__item\">Люблю спілкуватись з людьми.</li><li class=\"about-me__item\">Шукаю роботу, де немає однакових завдань.</li><li class=\"about-me__item\">Я вірю - робота не має бути засобом існування, робота має подобатись та приносити корисні рішення іншим, тоді буде результат для всіх.</li>"
   },
   "workExperienceTitle": {
     "en": "Work Experience",
     "ua": "Досвід роботи"
   },
   "jobTitlePB": {
-    "en": "Head of the Cherkas'ka oblast Credit cards department in PrivatBank",
+    "en": "Head of the Cherkasy region Credit cards department in PrivatBank",
     "ua": "Керівник напрямку Кредитні картки Черкаської області КБ ПриватБанк"
   },
   "jobListPB": {
-    "en": "<li class=\"job-item\">Organization of the work process of more than 140 employees</li><li class=\"job-item\">Software complexes - training to work in them, collection of problematic leads and recommendations, their consolidation and transfer of recommendations to developers for their improvement</li><li class=\"job-item\">Preparation of statistical data and activity reports of the Cherkasy oblast branch</li><li class=\"job-item\">Conducting trainings for employees</li><li class=\"job-item\">Conducting presentations for potential clients</li><li class=\"job-item\">General planning and monitoring of branch tasks</li><li class=\"job-item\">Recruitment and dismissal of employees</li><li class=\"job-item\">Work as a crisis manager in areas that are lagging behind in terms of deadlines</li>",
-    "ua": "<li class=\"job-item\">Організація робочого процесу понад 140 працівників</li><li class=\"job-item\">Програмні комплекси - навчання роботі в них, збір проблемних лідів та рекомендацій, їх консолідація та передача розробникам рекомендацій по їх удосконаленню</li><li class=\"job-item\">Підготовка статистичних даних та звітів діяльності філії Черкаської області</li><li class=\"job-item\">Проведення тренінгів для працівників</li><li class=\"job-item\">Проведення презентацій для потенційних клієнтів</li><li class=\"job-item\">Загальне планування та моніторинг виконання завдань філії</li><li class=\"job-item\">Прийом та звільнення працівників</li><li class=\"job-item\">Робота кризис-менеджером за напрямками, які відстають по дедлайнам</li>"
+    "en": "<li class=\"job-item\">Organization of the work process of more than 140 employees</li><li class=\"job-item\">Software complexes - training to work in them, collection of problematic leads and recommendations, their consolidation and transfer of recommendations to developers for their improvement</li><li class=\"job-item\">Preparation of statistical data and activity reports branch of the Cherkasy region</li><li class=\"job-item\">Conducting trainings for employees</li><li class=\"job-item\">Conducting presentations for potential clients</li><li class=\"job-item\">General planning and monitoring of branch tasks</li><li class=\"job-item\">Recruitment and dismissal of employees</li><li class=\"job-item\">Working as a crisis manager in areas that are lagging behind in terms of deadlines</li>",
+    "ua": "<li class=\"job-item\">Організація робочого процесу понад 140 працівників</li><li class=\"job-item\">Навчання працівників, збір проблемних лідів, підготовка та консолідація рекомендацій по удосконаленню робочого процесу</li><li class=\"job-item\">Підготовка статистичних даних та звітів діяльності філії Черкаської області</li><li class=\"job-item\">Проведення тренінгів для працівників</li><li class=\"job-item\">Проведення презентацій для потенційних клієнтів</li><li class=\"job-item\">Загальне планування та моніторинг виконання завдань філії</li><li class=\"job-item\">Прийом та звільнення працівників</li><li class=\"job-item\">Робота кризис-менеджером за напрямками, які відстають по дедлайнам</li>"
   },
   "jobTitleFOP": {
     "en": "Private entrepreneur",
     "ua": "Приватний підприємець"
   },
+  "jobTitleForestSoft": {
+    "en": "Fullstack developer in Forest Soft Company",
+    "ua": "Fullstack розробник в компанії Forest Soft"
+  },
   "jobListFOP": {
-    "en": "<li class=\"job-item\">Internet trading</li><li class=\"job-item\">Retail stores in Cherkasy</li><li class=\"job-item\">Production of own goods</li><li class=\"job-item\">Developed online shops based on CMS (<a href=\"https://stagro.trade\" target=\"_blank\">Stagro.trade</a>, <a href=\"https://eurofoods.com.ua\" target=\"_blank\">Eurofoods.com.ua</a>, <a href=\"https://feell.com.ua\" target=\"_blank\">Feell.com.ua</a>, <a href=\"https://garantbud2020.com.ua\" target=\"_blank\">Garantbud2020.com.ua</a>, <a href=\"https://kamuflazh-ukraine.com.ua\" target=\"_blank\">Kamuflazh-ukraine.com.ua</a>, <a href=\"https://ymmebli.in.ua\" target=\"_blank\">Ymmebli.in.ua</a>)</li><li class=\"job-item\">Development of our own CRM sales automation system to control cash transactions, reporting, accounting, consolidation of balances and other operations</li>",
-    "ua": "<li class=\"job-item\">Власний Інтернет-магазин</li><li class=\"job-item\">Роздрібні магазини в м.Черкаси</li><li class=\"job-item\">Виробництво власних товарів/продуктів</li><li class=\"job-item\">Створення Інтернет-магазинів на базі різних CMS (<a href=\"https://stagro.trade\" target=\"_blank\">Stagro.trade</a>, <a href=\"https://eurofoods.com.ua\" target=\"_blank\">Eurofoods.com.ua</a>, <a href=\"https://feell.com.ua\" target=\"_blank\">Feell.com.ua</a>, <a href=\"https://garantbud2020.com.ua\" target=\"_blank\">Garantbud2020.com.ua</a>, <a href=\"https://kamuflazh-ukraine.com.ua\" target=\"_blank\">Kamuflazh-ukraine.com.ua</a>, <a href=\"https://ymmebli.in.ua\" target=\"_blank\">Ymmebli.in.ua</a>)</li><li class=\"job-item\">Розробка всласної CRM системи автоматизації продаж для контролю касових операцій, звітності, обліку, консолідації залишків та інших операцій</li>"
+    "en": "<li class=\"job-item\">Internet trading</li><li class=\"job-item\">Retail stores in Cherkasy</li><li class=\"job-item\">Production of own goods</li><li class=\"job-item\">Development of our own CRM sales automation system to control cash transactions, reporting, accounting, consolidation of balances and other operations</li>",
+    "ua": "<li class=\"job-item\">Власний Інтернет-магазин</li><li class=\"job-item\">Роздрібні магазини в м.Черкаси</li><li class=\"job-item\">Виробництво власних товарів/продуктів</li><li class=\"job-item\">Розробка всласної CRM системи автоматизації продаж для контролю касових операцій, звітності, обліку, консолідації залишків та інших операцій</li>"
+  },
+  "jobListForestSoft": {
+    "en": "<li class=\"job-item\">Development of sites, admin panels, user interfaces, servers, Telegram Bots, API routs using JavaScript, React, Redux Toolkit,  Node.js, Express.js, REST API, HTML, CSS (Sass), MongoDB, Firebase, MySQL, Ant Design</li><li class=\"job-item\">Developed online shops based on CMS (<a href=\"https://stagro.trade\" target=\"_blank\">Stagro.trade</a>, <a href=\"https://eurofoods.com.ua\" target=\"_blank\">Eurofoods.com.ua</a>, <a href=\"https://feell.com.ua\" target=\"_blank\">Feell.com.ua</a>, <a href=\"https://garantbud2020.com.ua\" target=\"_blank\">Garantbud2020.com.ua</a>, <a href=\"https://sweetok.online\" target=\"_blank\">Sweetok.online</a>, <a href=\"https://kamuflazh-ukraine.com.ua\" target=\"_blank\">Kamuflazh-ukraine.com.ua</a>, <a href=\"https://ymmebli.in.ua\" target=\"_blank\">Ymmebli.in.ua</a>)</li><li class=\"job-item\">Work with Privatbank API, TurboSMS API, Telegram API, Google Sheets API, Cron applications</li><li class=\"job-item\">Server configuration on Node/Express.js, web domain, email domain, hosting, SSL certificates, API creation</li>",
+    "ua": "<li class=\"job-item\">Розробка сайтів, адмін-панелей, інтерфейсів користувачів, серверів, Telegram Bots, API routs, використовуючи JavaScript, React, Redux Toolkit, Node.js, Express.js, REST API, HTML, CSS (Sass), MongoDB, Firebase, MySQL, Ant Design</li><li class=\"job-item\">Створення Інтернет-магазинів на базі різних CMS (<a href=\"https://stagro.trade\" target=\"_blank\">Stagro.trade</a>, <a href=\"https://eurofoods.com.ua\" target=\"_blank\">Eurofoods.com.ua</a>, <a href=\"https://feell.com.ua\" target=\"_blank\">Feell.com.ua</a>, <a href=\"https://garantbud2020.com.ua\" target=\"_blank\">Garantbud2020.com.ua</a>, <a href=\"https://sweetok.online\" target=\"_blank\">Sweetok.online</a>, <a href=\"https://kamuflazh-ukraine.com.ua\" target=\"_blank\">Kamuflazh-ukraine.com.ua</a>, <a href=\"https://ymmebli.in.ua\" target=\"_blank\">Ymmebli.in.ua</a>)</li><li class=\"job-item\">Робота з Privatbank API, TurboSMS API, Telegram API, Google Sheets API, Cron applications</li><li class=\"job-item\">Конфігурація сервера на Node/Express.js, налаштування веб-домена, домена електронної пошти, хостингу, SSL-сертифікатів, створення API</li>"
   },
   "educationTitle": {
     "en": "Education",
@@ -148,6 +156,10 @@
   "certificate": {
     "en": "(certificate)",
     "ua": "(сертифікат)"
+  },
+  "certificates": {
+    "en": "(certificates)",
+    "ua": "(сертифікати)"
   },
   "educationTitleGEEK": {
     "en": "IT School GeekHub, Cherkassy",

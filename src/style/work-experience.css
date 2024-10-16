@@ -7,32 +7,33 @@
 }
 @media screen and (min-width: 1024px) {
   .job-cards {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
     margin-top: 34px;
   }
 }
 
 .job-card {
   margin-top: 24px;
-}
-@media screen and (min-width: 1024px) {
-  .job-card {
-    border: 1px solid var(--active-text-color);
-    border-radius: 8px;
-    padding: 12px;
-    width: 45%;
-    background-color: var(--card-color);
+  border: 1px solid var(--active-text-color);
+  border-radius: 8px;
+  padding: 12px;
+  background-color: var(--card-color);
 
-    transition: all var(--transition-primary);
-  }
+  transition: all var(--transition-primary);
 }
-@media screen and (min-width: 1024px) {
-  .job-card:hover {
-    border-color: transparent;
-    box-shadow: var(--shadow);
+/* @media screen and (min-width: 1024px) {
+  .job-card {
+    width: 45%;
   }
+} */
+
+.job-card:hover {
+  border-color: transparent;
+  box-shadow: var(--shadow);
 }
+
 .job-card hr {
   width: 0;
 

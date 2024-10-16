@@ -134,13 +134,11 @@
   .herro-section__job {
     position: absolute;
     width: 500px;
-    top: 100px;
+    top: 130px;
     left: 70px;
-    font-size: 28px;
+    font-size: 18px;
     line-height: 1.88;
     letter-spacing: 14px;
-    font-size: 24px;
-    line-height: 1.5;
 
     opacity: 0;
 
@@ -149,6 +147,7 @@
 }
 @media screen and (min-width: 1024px) {
   .herro-section__job {
+    font-size: 24px;
     letter-spacing: 12px;
     width: auto;
     top: 125px;
@@ -157,9 +156,10 @@
 }
 @media screen and (min-width: 1200px) {
   .herro-section__job {
+    font-size: 32px;
     letter-spacing: 14px;
     top: 140px;
-    left: 150px;
+    left: 275px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -470,6 +470,7 @@
 }
 
 .herro-section__button {
+  height: 52px;
   margin-top: 26px;
   font-size: 16px;
   font-weight: 700;
@@ -492,7 +493,7 @@
     padding: 12px 24px;
     position: absolute;
     top: 200px;
-    left: 185px;
+    left: 220px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -503,8 +504,8 @@
 }
 @media screen and (min-width: 1200px) {
   .herro-section__button {
-    top: 250px;
-    left: 405px;
+    top: 270px;
+    left: 445px;
   }
 }
 
